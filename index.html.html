@@ -1,0 +1,2576 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>천안중앙고 | 2027학년도 2학년 선택과목 가이드</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+/* ─── 기본 설정 ─── */
+:root {
+  --bg: #f2f0eb;
+  --white: #ffffff;
+  --border: #d8d3ca;
+  --border2: #c0bab0;
+  --text: #1e1b18;
+  --text2: #4a453e;
+  --text3: #8a847a;
+  --red: #c53030;
+  --red-l: #fff0f0;
+  --red-m: #fcd5d5;
+  --blue: #1a52a0;
+  --blue-l: #eaf1fc;
+  --green: #1a7040;
+  --green-l: #e8f7ee;
+  --gold: #9a7a00;
+  --gold-l: #fdf5da;
+  --purple: #5a2a9a;
+  --purple-l: #f2ecfc;
+  --teal: #0e6b62;
+  --teal-l: #e4f5f3;
+  --orange: #b84a00;
+  --orange-l: #fff2e8;
+  --sh: 0 2px 10px rgba(0,0,0,.08);
+  --sh2: 0 4px 20px rgba(0,0,0,.12);
+  --r: 10px;
+  --rs: 6px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 16px;
+  line-height: 1.7;
+  min-height: 100vh;
+}
+
+/* ─── 헤더 ─── */
+.hdr {
+  background: #1e1b18;
+  color: #fff;
+  padding: 0 20px;
+  position: sticky;
+  top: 0;
+  z-index: 300;
+  box-shadow: 0 2px 16px rgba(0,0,0,.3);
+}
+.hdr-in {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  gap: 16px;
+}
+.hdr-title {
+  font-size: 17px;
+  font-weight: 900;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.hdr-title em { color: #ff8060; font-style: normal; }
+.hdr-badge {
+  background: var(--red);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 5px 16px;
+  border-radius: 20px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  animation: blink 2s ease-in-out infinite;
+}
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:.65} }
+
+/* ─── 본문 ─── */
+.wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 18px 80px;
+}
+
+/* ─── 공지 박스 ─── */
+.notice-box {
+  background: var(--white);
+  border: 2px solid var(--red);
+  border-radius: var(--r);
+  padding: 20px 24px;
+  margin-bottom: 20px;
+  box-shadow: var(--sh);
+}
+.notice-title {
+  font-size: 18px;
+  font-weight: 900;
+  color: var(--red);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.notice-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 12px;
+}
+.notice-item {
+  background: var(--bg);
+  border-radius: var(--rs);
+  padding: 13px 16px;
+  border-left: 4px solid var(--red);
+}
+.notice-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text3);
+  letter-spacing: 0.3px;
+  margin-bottom: 4px;
+}
+.notice-val {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.5;
+}
+.notice-sub { font-size: 13px; color: var(--text2); margin-top: 3px; }
+
+/* 일정 */
+.sched-box {
+  background: var(--gold-l);
+  border: 1.5px solid #e0cc70;
+  border-radius: var(--r);
+  padding: 16px 20px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.sched-title { font-size: 15px; font-weight: 900; color: var(--gold); white-space: nowrap; }
+.sched-steps { display: flex; gap: 8px; flex-wrap: wrap; }
+.step {
+  font-size: 14px;
+  padding: 6px 16px;
+  border-radius: 20px;
+  border: 1.5px solid #c8b050;
+  background: var(--white);
+  color: var(--text2);
+  white-space: nowrap;
+}
+.step.now { background: var(--red); border-color: var(--red); color: #fff; font-weight: 700; }
+
+/* ─── 탭 ─── */
+/* ─── 탭 내비게이션 ─── */
+.tabs-wrap {
+  margin-bottom: 24px;
+}
+.tabs-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text3);
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  padding-left: 4px;
+}
+.tabs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+.tab {
+  position: relative;
+  padding: 0;
+  border: 2px solid var(--border);
+  background: var(--white);
+  border-radius: var(--r);
+  cursor: pointer;
+  font-family: inherit;
+  text-align: center;
+  transition: all .2s;
+  overflow: hidden;
+  box-shadow: var(--sh);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.tab-inner {
+  padding: 16px 12px 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+  width: 100%;
+}
+.tab-icon {
+  font-size: 26px;
+  line-height: 1;
+  transition: transform .2s;
+}
+.tab-text {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text2);
+  line-height: 1.35;
+  transition: color .2s;
+}
+.tab-bar-bottom {
+  width: 100%;
+  height: 4px;
+  background: var(--border);
+  transition: background .2s;
+}
+.tab:hover {
+  border-color: #a0b8d8;
+  transform: translateY(-2px);
+  box-shadow: var(--sh2);
+}
+.tab:hover .tab-icon { transform: scale(1.1); }
+.tab:hover .tab-text { color: var(--blue); }
+.tab:hover .tab-bar-bottom { background: #a0b8d8; }
+.tab.on {
+  border-color: var(--red);
+  background: var(--red-l);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(197,48,48,.18);
+}
+.tab.on .tab-text { color: var(--red); font-weight: 900; }
+.tab.on .tab-bar-bottom { background: var(--red); }
+.tab.on .tab-icon { transform: scale(1.12); }
+.tab-num {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  font-size: 10px;
+  font-weight: 900;
+  color: var(--text3);
+  background: var(--bg);
+  border-radius: 4px;
+  padding: 1px 5px;
+  line-height: 1.5;
+}
+.tab.on .tab-num { background: var(--red-m); color: var(--red); }
+.panel { display: none; }
+.panel.on { display: block; }
+
+/* ─── 카드 ─── */
+.card {
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: var(--r);
+  box-shadow: var(--sh);
+  overflow: hidden;
+  margin-bottom: 18px;
+}
+.card-head {
+  padding: 16px 20px;
+  border-bottom: 1.5px solid var(--border);
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+.card-body { padding: 20px; }
+.card-title { font-size: 17px; font-weight: 900; color: var(--text); }
+.card-sub { font-size: 13.5px; color: var(--text2); margin-top: 4px; line-height: 1.5; }
+
+/* 선택군 배지 */
+.gb {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 9px;
+  border-radius: 5px;
+  vertical-align: middle;
+  white-space: nowrap;
+  line-height: 1.4;
+}
+.g1 { background: #ffe8d8; color: #b84a00; }
+.g2 { background: #ffd8e8; color: #a0205a; }
+.g3 { background: var(--blue-l); color: var(--blue); }
+.g4 { background: var(--purple-l); color: var(--purple); }
+.g5 { background: var(--teal-l); color: var(--teal); }
+
+/* ─── 편제표 선택 UI (TAB1) ─── */
+.sel-summary {
+  background: var(--green-l);
+  border: 2px solid #90d0a8;
+  border-radius: var(--r);
+  padding: 16px 20px;
+  margin-bottom: 18px;
+}
+.sel-sum-title {
+  font-size: 16px;
+  font-weight: 900;
+  color: var(--green);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.sel-counters {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+.sel-cnt {
+  font-size: 15px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.cnt-num { font-size: 22px; font-weight: 900; }
+.cnt-max { font-size: 13px; color: var(--text3); }
+.cnt-ok .cnt-num { color: var(--green); }
+.cnt-over .cnt-num { color: var(--red); }
+.sel-tags { display: flex; flex-wrap: wrap; gap: 7px; }
+.sel-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 5px 14px;
+  border-radius: 20px;
+  background: var(--white);
+  border: 1.5px solid #90d0a8;
+  color: var(--green);
+}
+.sel-empty { font-size: 14px; color: #5a9a70; font-style: italic; }
+.clear-btn {
+  font-size: 13px;
+  padding: 5px 14px;
+  border: 1.5px solid var(--border2);
+  border-radius: var(--rs);
+  background: var(--white);
+  cursor: pointer;
+  font-family: inherit;
+  color: var(--text2);
+  font-weight: 700;
+}
+.clear-btn:hover { border-color: var(--red); color: var(--red); }
+
+/* 편제표 섹션 */
+.gun-section { margin-bottom: 20px; }
+.gun-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 20px;
+  background: var(--bg);
+  border-bottom: 1.5px solid var(--border);
+}
+.gun-header-text {}
+.gun-name { font-size: 17px; font-weight: 900; }
+.gun-rule { font-size: 13.5px; color: var(--text2); margin-top: 3px; }
+.gun-eval { font-size: 12.5px; color: var(--text3); }
+
+/* 과목 타일 - 편제표처럼 */
+.subj-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 10px;
+  padding: 18px 20px;
+}
+.subj-tile {
+  padding: 13px 16px;
+  border: 2px solid var(--border);
+  border-radius: var(--r);
+  background: var(--white);
+  cursor: pointer;
+  font-family: inherit;
+  text-align: left;
+  transition: all .18s;
+  position: relative;
+  min-height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.subj-tile:hover {
+  border-color: var(--red);
+  background: var(--red-l);
+  transform: translateY(-2px);
+  box-shadow: var(--sh);
+}
+.subj-tile.sel {
+  border-color: var(--red);
+  background: var(--red);
+  color: #fff;
+  box-shadow: var(--sh2);
+}
+.subj-tile.sel .sn,
+.subj-tile.sel .sm,
+.subj-tile.sel .st { color: #fff !important; opacity: 1; }
+.subj-tile.disabled { opacity: .35; cursor: not-allowed; }
+.subj-tile.disabled:hover { transform: none; border-color: var(--border); background: var(--white); box-shadow: none; }
+.subj-tile.cross-disabled {
+  opacity: .45;
+  cursor: not-allowed;
+  border-color: #e8c0c0;
+  background: #fff8f8;
+  pointer-events: none;
+}
+.subj-tile.cross-disabled .sn { color: var(--text3); }
+.cross-disabled-label {
+  font-size: 11px;
+  color: var(--red);
+  font-weight: 700;
+  background: var(--red-l);
+  border-radius: 4px;
+  padding: 2px 7px;
+  margin-top: 5px;
+  display: inline-block;
+}
+.sn { font-size: 15px; font-weight: 700; color: var(--text); line-height: 1.35; }
+.st { font-size: 12px; color: var(--text3); margin-top: 5px; }
+.sm { font-size: 12px; color: var(--text3); }
+.sel-check { position: absolute; top: 8px; right: 10px; font-size: 17px; display: none; }
+.subj-tile.sel .sel-check { display: block; }
+
+/* 필수 과목 표 */
+.fixed-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+}
+.fixed-table th {
+  background: #2a2520;
+  color: #fff;
+  padding: 10px 14px;
+  font-size: 13px;
+  font-weight: 700;
+  text-align: center;
+}
+.fixed-table td {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: middle;
+}
+.fixed-table tr:nth-child(even) td { background: #faf9f6; }
+.fixed-table .subj-name { font-weight: 700; font-size: 15px; }
+.fixed-table .eval-badge {
+  font-size: 11.5px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: var(--blue-l);
+  color: var(--blue);
+  font-weight: 700;
+  white-space: nowrap;
+}
+.fixed-badge {
+  background: #2a2520;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+/* 3학년 연계 패널 */
+.y3-panel {
+  background: linear-gradient(135deg, var(--purple-l) 0%, var(--blue-l) 100%);
+  border: 2px solid #c0a8e8;
+  border-radius: var(--r);
+  overflow: hidden;
+  margin-top: 6px;
+}
+.y3-head {
+  background: linear-gradient(135deg, var(--purple) 0%, var(--blue) 100%);
+  color: #fff;
+  padding: 16px 22px;
+}
+.y3-head-t { font-size: 18px; font-weight: 900; }
+.y3-head-s { font-size: 13.5px; color: rgba(255,255,255,.75); margin-top: 4px; }
+.y3-body { padding: 20px; }
+.flow-box {
+  background: var(--white);
+  border: 1.5px solid #c0a8e8;
+  border-radius: var(--r);
+  padding: 18px;
+  margin-bottom: 16px;
+}
+.flow-title { font-size: 14px; font-weight: 700; color: var(--purple); margin-bottom: 12px; }
+.flow-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.flow-year {
+  font-size: 13px;
+  font-weight: 900;
+  padding: 8px 12px;
+  border-radius: var(--rs);
+  text-align: center;
+  flex-shrink: 0;
+  min-width: 60px;
+  align-self: flex-start;
+  margin-top: 2px;
+}
+.fy2 { background: var(--green-l); color: var(--green); }
+.fy3 { background: var(--purple-l); color: var(--purple); }
+.flow-arrow { font-size: 24px; color: var(--border2); flex-shrink: 0; align-self: center; }
+.flow-items { display: flex; flex-wrap: wrap; gap: 7px; flex: 1; }
+.fi {
+  font-size: 14px;
+  font-weight: 700;
+  padding: 5px 14px;
+  border-radius: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+.fi-y2 { background: var(--green-l); color: var(--green); border: 1.5px solid #80c898; }
+.fi-y3g4 { background: var(--purple-l); color: var(--purple); border: 1.5px solid #c0a8e8; }
+.fi-y3g5 { background: var(--teal-l); color: var(--teal); border: 1.5px solid #80c8c0; }
+.rec-note {
+  background: var(--gold-l);
+  border-left: 4px solid var(--gold);
+  border-radius: var(--rs);
+  padding: 12px 16px;
+  font-size: 14px;
+  color: #5a4200;
+  line-height: 1.7;
+  margin-top: 14px;
+}
+
+/* ─── 대학 조회 (TAB2) ─── */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: 14px;
+  align-items: end;
+}
+.form-group {}
+.form-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text3);
+  margin-bottom: 6px;
+  display: block;
+}
+.form-sel {
+  width: 100%;
+  padding: 11px 16px;
+  border: 2px solid var(--border);
+  border-radius: var(--rs);
+  font-family: inherit;
+  font-size: 16px;
+  background: var(--bg);
+  appearance: none;
+  color: var(--text);
+  cursor: pointer;
+  transition: border-color .2s;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9'%3E%3Cpath d='M1 1l6 6 6-6' stroke='%23999' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 40px;
+}
+.form-sel:focus { outline: none; border-color: var(--red); }
+.query-btn {
+  padding: 11px 28px;
+  background: var(--red);
+  color: #fff;
+  border: none;
+  border-radius: var(--rs);
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 900;
+  cursor: pointer;
+  transition: all .2s;
+  white-space: nowrap;
+}
+.query-btn:hover { background: #e04040; transform: translateY(-1px); box-shadow: var(--sh); }
+
+/* 결과 카드 */
+.result-card {
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: var(--r);
+  overflow: hidden;
+  box-shadow: var(--sh);
+  animation: fadeUp .3s ease;
+}
+@keyframes fadeUp { from{opacity:0;transform:translateY(8px)} to{opacity:1;transform:translateY(0)} }
+.result-head {
+  background: linear-gradient(135deg, #1e1b18 0%, #3a2a20 100%);
+  color: #fff;
+  padding: 18px 22px;
+}
+.result-univ { font-size: 20px; font-weight: 900; }
+.result-dept { font-size: 15px; color: rgba(255,255,255,.7); margin-top: 4px; }
+.result-body { padding: 22px; }
+
+/* 과목 태그들 */
+.tag-wrap { display: flex; flex-wrap: wrap; gap: 8px; }
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 7px 15px;
+  border-radius: var(--rs);
+  font-size: 15px;
+  font-weight: 700;
+  cursor: default;
+  line-height: 1.3;
+}
+.tag-core { background: var(--red); color: #fff; }
+.tag-rec { background: var(--blue-l); color: var(--blue); border: 1px solid #b8d0f0; }
+.tag-now {
+  font-size: 11px;
+  background: rgba(255,255,255,.25);
+  padding: 1px 6px;
+  border-radius: 4px;
+  margin-left: 3px;
+}
+.tag-now-rec {
+  font-size: 11px;
+  background: var(--blue-l);
+  color: var(--blue);
+  padding: 1px 6px;
+  border-radius: 4px;
+  margin-left: 3px;
+  border: 1px solid #b8d0f0;
+}
+
+/* 섹션 타이틀 */
+.sec-title {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 11px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.rsec { margin-bottom: 20px; }
+.rsec:last-child { margin-bottom: 0; }
+.rsec-note {
+  background: var(--gold-l);
+  border-left: 4px solid var(--gold);
+  border-radius: var(--rs);
+  padding: 12px 16px;
+  font-size: 14px;
+  color: #5a4200;
+  line-height: 1.7;
+  margin-top: 12px;
+}
+.rsec-src {
+  font-size: 13px;
+  color: var(--text3);
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+}
+.divider { border: none; border-top: 1px solid var(--border); margin: 20px 0; }
+
+/* 수강 경로 박스 */
+.chain-box {
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: var(--r);
+  overflow: hidden;
+  margin-top: 16px;
+}
+.chain-head {
+  background: linear-gradient(90deg, var(--purple) 0%, var(--blue) 100%);
+  color: #fff;
+  padding: 13px 20px;
+}
+.chain-head-t { font-size: 16px; font-weight: 900; }
+.chain-head-s { font-size: 13px; color: rgba(255,255,255,.7); margin-top: 3px; }
+.chain-body { padding: 18px; }
+.chain-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+.chain-row:last-child { margin-bottom: 0; }
+.chain-yr {
+  font-size: 13px;
+  font-weight: 900;
+  padding: 8px 12px;
+  border-radius: var(--rs);
+  text-align: center;
+  flex-shrink: 0;
+  min-width: 60px;
+  align-self: flex-start;
+}
+.cy2 { background: var(--green-l); color: var(--green); }
+.cy3 { background: var(--purple-l); color: var(--purple); }
+.chain-content { flex: 1; }
+.chain-label { font-size: 13px; color: var(--text3); margin-bottom: 8px; }
+.chain-down { text-align: center; font-size: 24px; color: var(--border2); margin: 4px 0; }
+
+/* 학과명 기반 대학 리스트 */
+.univ-search-box {
+  background: var(--white);
+  border: 2px solid var(--border);
+  border-radius: var(--r);
+  padding: 18px 20px;
+  margin-top: 18px;
+}
+.univ-search-title {
+  font-size: 16px;
+  font-weight: 900;
+  color: var(--blue);
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.similar-list { display: flex; flex-direction: column; gap: 10px; }
+.similar-item {
+  border: 1.5px solid var(--border);
+  border-radius: var(--rs);
+  padding: 13px 16px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  cursor: pointer;
+  transition: all .15s;
+}
+.similar-item:hover { border-color: var(--blue); background: var(--blue-l); }
+.si-info { flex: 1; }
+.si-univ { font-size: 16px; font-weight: 700; }
+.si-dept { font-size: 14px; color: var(--text2); margin-top: 2px; }
+.si-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
+.si-tag {
+  font-size: 12px;
+  font-weight: 700;
+  padding: 2px 9px;
+  border-radius: 4px;
+}
+.si-tag-core { background: var(--red-m); color: var(--red); }
+.si-tag-rec { background: var(--blue-l); color: var(--blue); }
+
+/* ─── 진로 계열 (TAB3) ─── */
+.career-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.career-btn {
+  padding: 16px 10px;
+  border: 2px solid var(--border);
+  border-radius: var(--r);
+  background: var(--white);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text2);
+  text-align: center;
+  transition: all .2s;
+}
+.career-btn:hover {
+  border-color: var(--red);
+  color: var(--red);
+  background: var(--red-l);
+  transform: translateY(-2px);
+  box-shadow: var(--sh);
+}
+.career-btn.on {
+  border-color: var(--red);
+  background: var(--red);
+  color: #fff;
+  box-shadow: var(--sh2);
+}
+.career-icon { font-size: 26px; display: block; margin-bottom: 7px; }
+.sub-tabs { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
+.sub-tab {
+  padding: 7px 18px;
+  border: 2px solid var(--border);
+  border-radius: 20px;
+  background: var(--bg);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text2);
+  cursor: pointer;
+  font-family: inherit;
+  transition: all .15s;
+}
+.sub-tab:hover { border-color: var(--red); color: var(--red); }
+.sub-tab.on { background: var(--red); border-color: var(--red); color: #fff; }
+
+/* ─── 역조회 (TAB4) ─── */
+.rev-filter { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 14px; }
+.rev-chip {
+  padding: 7px 18px;
+  border: 2px solid var(--border);
+  border-radius: 20px;
+  background: var(--white);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text2);
+  cursor: pointer;
+  font-family: inherit;
+  transition: all .15s;
+}
+.rev-chip:hover { border-color: var(--blue); color: var(--blue); }
+.rev-chip.on { background: var(--text); border-color: var(--text); color: #fff; }
+.rev-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  gap: 9px;
+  margin-bottom: 20px;
+}
+.rev-tile {
+  padding: 12px 15px;
+  border: 2px solid var(--border);
+  border-radius: var(--rs);
+  background: var(--white);
+  cursor: pointer;
+  font-family: inherit;
+  text-align: left;
+  transition: all .15s;
+}
+.rev-tile:hover { border-color: var(--blue); background: var(--blue-l); transform: translateY(-1px); }
+.rev-tile.on { border-color: var(--blue); background: var(--blue); }
+.rev-tile.on .rt-name { color: #fff; }
+.rev-tile.on .rt-meta { color: rgba(255,255,255,.7); }
+.rt-name { font-size: 15px; font-weight: 700; color: var(--text); line-height: 1.3; }
+.rt-meta { font-size: 12px; color: var(--text3); margin-top: 4px; }
+
+/* 대학 목록 */
+.univ-list { display: flex; flex-direction: column; gap: 9px; }
+.univ-item {
+  border: 1.5px solid var(--border);
+  border-radius: var(--rs);
+  padding: 13px 16px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  transition: all .15s;
+}
+.univ-item:hover { border-color: var(--blue); background: var(--blue-l); }
+.ui-info { flex: 1; }
+.ui-univ { font-size: 16px; font-weight: 900; }
+.ui-dept { font-size: 14px; color: var(--text2); margin-top: 2px; }
+.ui-lv {
+  font-size: 12.5px;
+  font-weight: 700;
+  padding: 4px 11px;
+  border-radius: 5px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  align-self: flex-start;
+}
+.lv-core { background: var(--red); color: #fff; }
+.lv-rec { background: var(--blue-l); color: var(--blue); }
+
+/* 범례 */
+.legend {
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: var(--rs);
+  padding: 13px 18px;
+  margin-bottom: 18px;
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  align-items: center;
+  font-size: 14px;
+  color: var(--text2);
+}
+.leg-item { display: flex; align-items: center; gap: 6px; }
+.leg-dot { width: 12px; height: 12px; border-radius: 3px; flex-shrink: 0; }
+
+/* 빈 상태 */
+.empty {
+  text-align: center;
+  padding: 52px 20px;
+  color: var(--text3);
+}
+.empty-icon { font-size: 50px; margin-bottom: 12px; }
+.empty-txt { font-size: 17px; font-weight: 700; }
+.empty-sub { font-size: 14px; margin-top: 6px; }
+
+/* 과학중점반 안내 */
+.science-notice {
+  background: #fff8e0;
+  border: 2px solid #e8c840;
+  border-radius: var(--r);
+  padding: 16px 20px;
+  margin-top: 6px;
+  font-size: 14.5px;
+  color: #5a4800;
+  line-height: 1.7;
+}
+.science-notice strong { color: #9a5000; font-size: 15px; }
+
+/* 리로스쿨 안내 — 가정통신문 스타일 */
+.letter-wrap {
+  background: var(--white);
+  border: 2px solid var(--border);
+  border-radius: var(--r);
+  box-shadow: var(--sh2);
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+.letter-header {
+  background: #f7f4ee;
+  border-bottom: 2px solid var(--border);
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.letter-school {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.letter-logo {
+  width: 44px;
+  height: 44px;
+  background: var(--text);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  flex-shrink: 0;
+}
+.letter-school-name {
+  font-size: 17px;
+  font-weight: 900;
+  color: var(--text);
+  line-height: 1.3;
+}
+.letter-school-sub {
+  font-size: 12px;
+  color: var(--text3);
+  margin-top: 1px;
+}
+.letter-dept {
+  text-align: right;
+  font-size: 13px;
+  color: var(--text2);
+  line-height: 1.6;
+}
+.letter-body {
+  padding: 22px 28px;
+}
+.letter-subject-row {
+  display: flex;
+  align-items: stretch;
+  border: 1.5px solid var(--text);
+  border-radius: var(--rs);
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.letter-subject-label {
+  background: var(--text);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 900;
+  padding: 10px 18px;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.letter-subject-value {
+  font-size: 16px;
+  font-weight: 700;
+  padding: 10px 18px;
+  display: flex;
+  align-items: center;
+  color: var(--text);
+  background: #fafaf8;
+}
+.letter-greeting {
+  font-size: 15.5px;
+  color: var(--text2);
+  line-height: 1.9;
+  margin-bottom: 20px;
+  text-indent: 1.5em;
+}
+.letter-divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 18px 0;
+}
+.letter-content-title {
+  font-size: 17px;
+  font-weight: 900;
+  color: var(--text);
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+/* 수강신청 절차 스텝 */
+.apply-steps {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+.apply-step {
+  flex: 1;
+  min-width: 130px;
+  background: var(--blue-l);
+  border: 1.5px solid #b8d4f0;
+  padding: 14px 16px;
+  text-align: center;
+  position: relative;
+}
+.apply-step:first-child { border-radius: var(--rs) 0 0 var(--rs); }
+.apply-step:last-child { border-radius: 0 var(--rs) var(--rs) 0; }
+.apply-step + .apply-step { border-left: none; }
+.as-num {
+  font-size: 11px;
+  font-weight: 900;
+  color: var(--blue);
+  letter-spacing: 0.5px;
+  margin-bottom: 5px;
+}
+.as-icon { font-size: 22px; margin-bottom: 5px; }
+.as-text {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.4;
+}
+.as-arrow {
+  position: absolute;
+  right: -14px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: var(--blue);
+  z-index: 2;
+  background: var(--white);
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid #b8d4f0;
+  font-weight: 900;
+}
+.apply-step:last-child .as-arrow { display: none; }
+/* 최종 경로 박스 */
+.apply-path-box {
+  background: #f0f5fc;
+  border: 2px solid #b8d4f0;
+  border-radius: var(--rs);
+  padding: 16px 20px;
+  margin-bottom: 18px;
+}
+.apply-path-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.apply-path-text {
+  font-size: 15.5px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.8;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+.path-chunk {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.path-item {
+  background: var(--white);
+  border: 1.5px solid #b8d4f0;
+  border-radius: var(--rs);
+  padding: 4px 14px;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--blue);
+  white-space: nowrap;
+}
+.path-item.highlight {
+  background: var(--blue);
+  color: #fff;
+  border-color: var(--blue);
+}
+.path-arrow-txt {
+  color: var(--border2);
+  font-size: 18px;
+  font-weight: 900;
+}
+/* 유의사항 */
+.letter-caution {
+  background: #fff9ec;
+  border: 1.5px solid #f0d890;
+  border-left: 4px solid var(--gold);
+  border-radius: var(--rs);
+  padding: 14px 18px;
+  font-size: 14.5px;
+  color: #5a4200;
+  line-height: 1.85;
+  margin-bottom: 18px;
+}
+.letter-caution strong { color: #8a5000; }
+.letter-sign {
+  text-align: right;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text2);
+  margin-top: 20px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+}
+/* 사용 안 하는 구버전 CSS 제거됨 */
+
+/* ─── 매뉴얼 박스 ─── */
+.manual-box {
+  background: var(--white); border: 2px solid var(--border);
+  border-radius: var(--r); box-shadow: var(--sh2); margin-bottom: 20px; overflow: hidden;
+}
+.manual-header {
+  background: #f7f4ee; border-bottom: 2px solid var(--border);
+  padding: 13px 22px; display: flex; align-items: center;
+  justify-content: space-between; gap: 12px; flex-wrap: wrap;
+}
+.manual-school { display: flex; align-items: center; gap: 12px; }
+.manual-logo {
+  width: 42px; height: 42px; background: var(--text); border-radius: 6px;
+  display: flex; align-items: center; justify-content: center; font-size: 22px; flex-shrink: 0;
+}
+.manual-school-name { font-size: 16px; font-weight: 900; }
+.manual-school-sub { font-size: 12px; color: var(--text3); margin-top: 2px; }
+.manual-dept { font-size: 13px; color: var(--text2); text-align: right; }
+.manual-subject-row {
+  display: flex; align-items: stretch; border-bottom: 2px solid var(--border);
+}
+.manual-subject-label {
+  background: var(--text); color: #fff; font-size: 15px; font-weight: 900;
+  padding: 11px 20px; display: flex; align-items: center; white-space: nowrap; flex-shrink: 0;
+}
+.manual-subject-value {
+  font-size: 16px; font-weight: 700; padding: 11px 20px;
+  display: flex; align-items: center; background: #fafaf8;
+}
+.manual-body { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
+.manual-section { padding: 18px 22px; }
+.manual-section + .manual-section { border-left: 1.5px solid var(--border); }
+.manual-section-title {
+  font-size: 15px; font-weight: 900; color: var(--text); margin-bottom: 12px;
+  display: flex; align-items: center; gap: 6px;
+}
+.manual-steps { display: flex; align-items: center; gap: 4px; flex-wrap: wrap; margin-bottom: 14px; }
+.manual-step {
+  background: var(--blue-l); border: 1.5px solid #b8d4f0; border-radius: var(--rs);
+  padding: 10px 12px; text-align: center; flex: 1; min-width: 60px;
+}
+.manual-step.ms-final { background: #dbeafe; border-color: #90b8f0; }
+.ms-num { font-size: 10px; font-weight: 900; color: var(--blue); margin-bottom: 4px; }
+.ms-icon { font-size: 20px; margin-bottom: 4px; }
+.ms-text { font-size: 12px; font-weight: 700; color: var(--text); line-height: 1.35; }
+.ms-arrow { font-size: 18px; color: var(--border2); font-weight: 900; flex-shrink: 0; }
+.manual-path-box {
+  background: #f0f5fc; border: 1.5px solid #b8d4f0; border-radius: var(--rs);
+  padding: 13px 16px; margin-bottom: 12px;
+}
+.manual-path-label { font-size: 13px; font-weight: 700; color: var(--blue); margin-bottom: 8px; }
+.manual-path-row { display: flex; align-items: center; flex-wrap: wrap; gap: 6px; }
+.mpath-item {
+  background: var(--white); border: 1.5px solid #b8d4f0; border-radius: var(--rs);
+  padding: 5px 13px; font-size: 14px; font-weight: 700; color: var(--blue); white-space: nowrap;
+}
+.mpath-item.mpath-hl { background: var(--blue); color: #fff; border-color: var(--blue); white-space: normal; line-height: 1.55; }
+.mpath-arrow { font-size: 18px; color: var(--border2); font-weight: 900; flex-shrink: 0; }
+.manual-warn-red {
+  background: var(--red-l); border: 1.5px solid var(--red-m); border-left: 4px solid var(--red);
+  border-radius: var(--rs); padding: 11px 14px; font-size: 13.5px; color: #7a0000; line-height: 1.7;
+}
+.manual-caution {
+  background: #fff9ec; border: 1.5px solid #f0d890; border-radius: var(--rs);
+  padding: 12px 14px; font-size: 14px; color: #5a4200; line-height: 1.75; margin-bottom: 0;
+}
+.mc-row { display: flex; gap: 8px; margin-bottom: 5px; align-items: flex-start; }
+.mc-row:last-child { margin-bottom: 0; }
+.mc-label { font-weight: 900; flex-shrink: 0; width: 16px; color: var(--gold); }
+.mc-row-red .mc-text { color: var(--red); }
+.manual-sched { display: flex; flex-direction: column; gap: 6px; margin-bottom: 14px; }
+.msched-item {
+  display: flex; align-items: center; gap: 10px; padding: 8px 12px;
+  border-radius: var(--rs); background: var(--bg); border: 1.5px solid var(--border); font-size: 14px;
+}
+.msched-item.msched-now { background: var(--red-l); border-color: var(--red-m); }
+.msched-n { font-weight: 900; color: var(--text); min-width: 80px; flex-shrink: 0; }
+.msched-d { flex: 1; color: var(--text2); }
+.msched-badge {
+  background: var(--red); color: #fff; font-size: 11px; font-weight: 700;
+  padding: 2px 9px; border-radius: 20px; white-space: nowrap;
+}
+.manual-sign { font-size: 15px; font-weight: 700; color: var(--text2); text-align: right; padding-top: 12px; border-top: 1px solid var(--border); margin-top: 12px; }
+
+/* ─── 과학중점반 패널 ─── */
+.sci-banner {
+  background: linear-gradient(135deg, #1a5a10 0%, #2a8a20 100%); color: #fff;
+  border-radius: var(--r); padding: 16px 22px; margin-bottom: 18px;
+  display: flex; align-items: center; gap: 16px; box-shadow: 0 4px 16px rgba(26,90,16,.3);
+}
+.sci-banner-icon { font-size: 36px; flex-shrink: 0; }
+.sci-banner-title { font-size: 18px; font-weight: 900; margin-bottom: 4px; }
+.sci-banner-sub { font-size: 14px; color: rgba(255,255,255,.85); line-height: 1.6; }
+.sci-rule-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.sci-rule-item { border-radius: var(--rs); overflow: hidden; border: 1.5px solid var(--border); }
+.sci-rule-red .sri-head { background: var(--red); color: #fff; }
+.sci-rule-blue .sri-head { background: var(--blue); color: #fff; }
+.sri-head { padding: 10px 14px; font-size: 14px; font-weight: 900; }
+.sri-body { padding: 12px 14px; background: var(--bg); }
+.sri-row { display: flex; gap: 8px; margin-bottom: 8px; font-size: 14px; line-height: 1.6; }
+.sri-row:last-child { margin-bottom: 0; }
+.sri-icon { font-size: 16px; flex-shrink: 0; }
+.sci-combo-table { width: 100%; }
+.sct-head {
+  display: grid; grid-template-columns: 80px 1fr 1.2fr 1.6fr;
+  background: #2a2520; color: #fff; font-size: 13px; font-weight: 700;
+}
+.sct-head .sct-col { padding: 10px 12px; text-align: center; border-right: 1px solid rgba(255,255,255,.15); }
+.sct-head .sct-col:last-child { border-right: none; }
+.sct-sub { display: block; font-size: 11px; font-weight: 400; color: rgba(255,255,255,.7); margin-top: 2px; }
+.sct-row { display: grid; grid-template-columns: 80px 1fr 1.2fr 1.6fr; border-bottom: 1px solid var(--border); }
+.sct-row-2 { border-bottom: 2.5px solid var(--border2); }
+.sct-row-b { background: #fafaf8; }
+.sct-col {
+  padding: 10px 12px; border-right: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 5px; text-align: center;
+}
+.sct-col:last-child { border-right: none; }
+.sct-lbl { flex-direction: column; align-items: flex-start; background: #f0ede8; justify-content: flex-start; padding-top: 12px; }
+.sct-case { font-size: 12px; font-weight: 900; color: var(--text); margin-bottom: 4px; }
+.sct-sem { font-size: 13px; font-weight: 700; color: var(--text2); }
+.sct-tag { font-size: 13px; font-weight: 700; padding: 4px 10px; border-radius: var(--rs); line-height: 1.4; text-align: center; }
+.sct-g1 { background: #fdf4d8; color: var(--gold); border: 1px solid #e8d48a; }
+.sct-g2 { background: var(--blue-l); color: var(--blue); border: 1px solid #b8d4f0; }
+.sct-must { background: var(--red); color: #fff; border-color: var(--red); }
+.sct-sci { background: #e8f5e8; color: #1a5a10; border: 1px solid #90c890; }
+.sci-y3-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 12px; margin-bottom: 14px; }
+.sy3-col { background: var(--bg); border: 1.5px solid var(--border); border-radius: var(--rs); padding: 12px 14px; }
+.sy3-head { font-size: 13.5px; font-weight: 900; margin-bottom: 9px; }
+.sy3-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+
+@media (max-width: 780px) {
+  .manual-body { grid-template-columns: 1fr; }
+  .manual-section + .manual-section { border-left: none; border-top: 1.5px solid var(--border); }
+  .sci-rule-grid { grid-template-columns: 1fr; }
+  .sct-head, .sct-row { grid-template-columns: 70px 1.2fr 1.6fr; }
+  .sct-head .sct-col:nth-child(2), .sct-row .sct-col:nth-child(2) { display: none; }
+}
+@media (max-width: 680px) {
+  body { font-size: 15px; }
+  .form-row { grid-template-columns: 1fr; }
+  .hdr-title { font-size: 14px; }
+  .subj-grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
+  .career-grid { grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); }
+  .tabs { grid-template-columns: repeat(3, 1fr); }
+  .tab-text { font-size: 12px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ══ 헤더 ══ -->
+<header class="hdr">
+  <div class="hdr-in">
+    <div class="hdr-title">천안중앙고 <em>2027학년도</em> 2학년 선택과목 가이드</div>
+    <div class="hdr-badge">📅 1차 신청 6.2~6.9</div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <!-- ══ 매뉴얼 헤더 박스 ══ -->
+  <div class="manual-box">
+    <!-- 학교 헤더 -->
+    <div class="manual-header">
+      <div class="manual-school">
+        <div class="manual-logo">🏫</div>
+        <div class="manual-school-info">
+          <div class="manual-school-name">천 안 중 앙 고 등 학 교</div>
+          <div class="manual-school-sub">긍정의 힘! 자신감 넘치는 중앙인 &nbsp;|&nbsp; 교훈: 人和團結, 自彊不息</div>
+        </div>
+      </div>
+      <div class="manual-dept">담당 : 교육과정부 &nbsp;|&nbsp; 연락처 : 567-7910</div>
+    </div>
+
+    <!-- 제목 -->
+    <div class="manual-subject-row">
+      <div class="manual-subject-label">제 목</div>
+      <div class="manual-subject-value">2027학년도 2학년(현 1학년) 1차 선택 과목 수강 신청 안내</div>
+    </div>
+
+    <!-- 본문 2단 그리드 -->
+    <div class="manual-body">
+
+      <!-- 좌: 수강신청 방법 -->
+      <div class="manual-section">
+        <div class="manual-section-title">📋 수강신청 방법 (리로스쿨)</div>
+        <div class="manual-steps">
+          <div class="manual-step">
+            <div class="ms-num">STEP 1</div>
+            <div class="ms-icon">🔍</div>
+            <div class="ms-text">이 가이드에서<br>과목 탐색</div>
+          </div>
+          <div class="ms-arrow">›</div>
+          <div class="manual-step">
+            <div class="ms-num">STEP 2</div>
+            <div class="ms-icon">💻</div>
+            <div class="ms-text">리로스쿨<br>로그인</div>
+          </div>
+          <div class="ms-arrow">›</div>
+          <div class="manual-step">
+            <div class="ms-num">STEP 3</div>
+            <div class="ms-icon">🔔</div>
+            <div class="ms-text">알림신청<br>클릭</div>
+          </div>
+          <div class="ms-arrow">›</div>
+          <div class="manual-step">
+            <div class="ms-num">STEP 4</div>
+            <div class="ms-icon">📄</div>
+            <div class="ms-text">가정통신문<br>클릭</div>
+          </div>
+          <div class="ms-arrow">›</div>
+          <div class="manual-step ms-final">
+            <div class="ms-num">STEP 5</div>
+            <div class="ms-icon">✅</div>
+            <div class="ms-text">수강신청<br>완료</div>
+          </div>
+        </div>
+        <div class="manual-path-box">
+          <div class="manual-path-label">🖥️ 리로스쿨 접속 경로</div>
+          <div class="manual-path-row">
+            <span class="mpath-item">리로스쿨 로그인</span>
+            <span class="mpath-arrow">→</span>
+            <span class="mpath-item">알림신청</span>
+            <span class="mpath-arrow">→</span>
+            <span class="mpath-item">가정통신문</span>
+            <span class="mpath-arrow">→</span>
+            <span class="mpath-item mpath-hl">「2027학년도 2학년(현 1학년)<br>1차 선택 과목 수강 신청」</span>
+          </div>
+        </div>
+        <div class="manual-warn-red">
+          ⚠️ <strong>실제 수강신청은 반드시 리로스쿨에서 완료하셔야 합니다.</strong><br>
+          이 자료는 과목 선택을 돕기 위한 참고용 가이드입니다.
+        </div>
+      </div>
+
+      <!-- 우: 유의사항 + 일정 -->
+      <div class="manual-section">
+        <div class="manual-section-title">⚠️ 학생 및 학부모 유의사항</div>
+        <div class="manual-caution">
+          <div class="mc-row"><span class="mc-label">가</span><span class="mc-text">2026학년도 입학생 교육과정 편제표를 참고하여 2학년 과목을 선택해 주세요.</span></div>
+          <div class="mc-row"><span class="mc-label">나</span><span class="mc-text"><strong>학기별로 같은 교과를 선택할 수 없습니다.</strong></span></div>
+          <div class="mc-row"><span class="mc-label">다</span><span class="mc-text">이번 수요 조사는 확정된 수강신청이 아니며, 수요조사 결과는 실제 과목 개설 여부의 핵심 근거가 됩니다.</span></div>
+          <div class="mc-row"><span class="mc-label">라</span><span class="mc-text">선택 과목에 신청 인원이 너무 적을 경우 학교 여건상 해당 과목이 개설되지 않을 수 있습니다.</span></div>
+          <div class="mc-row"><span class="mc-label">마</span><span class="mc-text">우리 학교에 개설되지 않는 과목은 <strong>공동교육과정</strong>을 통해 이수할 수 있습니다.</span></div>
+          <div class="mc-row mc-row-red"><span class="mc-label">바</span><span class="mc-text"><strong>2026.08.28.(금) 이후에는 과목 선택 변경이 불가할 수 있으니 신중하게 선택해야 합니다.</strong></span></div>
+        </div>
+
+        <div class="manual-section-title" style="margin-top:16px">📆 수강신청 일정</div>
+        <div class="manual-sched">
+          <div class="msched-item msched-now">
+            <span class="msched-n">1차</span>
+            <span class="msched-d">2026.06.02(화) ~ 06.09(화)</span>
+            <span class="msched-badge">현재 진행 중</span>
+          </div>
+          <div class="msched-item">
+            <span class="msched-n">2차</span>
+            <span class="msched-d">2026.07.10(금) ~ 07.16(목)</span>
+          </div>
+          <div class="msched-item">
+            <span class="msched-n">3차 (최종)</span>
+            <span class="msched-d">2026.08.24(월) ~ 08.28(금)</span>
+          </div>
+        </div>
+
+        <div class="manual-sign">2026년 6월 1일 &nbsp;&nbsp; 천 안 중 앙 고 등 학 교 장</div>
+      </div>
+
+    </div><!-- /manual-body -->
+  </div><!-- /manual-box -->
+
+  <!-- ══ 범례 ══ -->
+  <div class="legend">
+    <span style="font-size:14px;font-weight:900;color:var(--text2)">범례</span>
+    <div class="leg-item"><div class="leg-dot" style="background:var(--red)"></div>★★★ 핵심 권장 (강력 권장)</div>
+    <div class="leg-item"><div class="leg-dot" style="background:var(--blue)"></div>★★ 권장</div>
+    <div class="leg-item"><span class="gb g1">선택군1</span> 제2외국어·한문 (1학기 택1 / 2학기 택1)</div>
+    <div class="leg-item"><span class="gb g2">선택군2</span> 수학·정보·융합 (학기별 택1)</div>
+    <div class="leg-item"><span class="gb g3">선택군3</span> 사회·과학 (학기별 택2)</div>
+    <div class="leg-item"><span class="gb g4">군4</span> 3학년 과학심화</div>
+    <div class="leg-item"><span class="gb g5">군5</span> 3학년 수학·인문·정보</div>
+  </div>
+
+  <!-- ══ 리로스쿨 필수 안내 배너 ══ -->
+  <div style="background:linear-gradient(90deg,#7a0000 0%,var(--red) 100%);color:#fff;border-radius:var(--r);padding:14px 22px;margin-bottom:18px;display:flex;align-items:center;gap:14px;box-shadow:0 4px 16px rgba(197,48,48,.3);flex-wrap:wrap">
+    <span style="font-size:26px;flex-shrink:0">⚠️</span>
+    <div style="flex:1">
+      <div style="font-size:17px;font-weight:900;margin-bottom:3px">이 자료는 과목 선택을 돕기 위한 참고용 가이드입니다</div>
+      <div style="font-size:14.5px;color:rgba(255,255,255,.9);line-height:1.6">
+        <strong style="color:#ffe066">실제 수강신청은 반드시 리로스쿨에서 완료하셔야 합니다.</strong>
+        이 가이드에서 과목을 탐색한 후 → 리로스쿨 로그인 → 알림신청 → 가정통신문 → 「2027학년도 2학년(현 1학년) 1차 선택 과목 수강 신청」에서 신청하세요.
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ 탭 ══ -->
+  <div class="tabs-wrap">
+    <div class="tabs-label">▼ 아래 메뉴를 클릭해서 원하는 기능을 선택하세요</div>
+    <div class="tabs">
+      <button class="tab on" onclick="switchTab('sel',this)">
+        <span class="tab-num">01</span>
+        <div class="tab-inner">
+          <span class="tab-icon">📝</span>
+          <span class="tab-text">내 과목 선택<br>&amp; 3학년 연계</span>
+        </div>
+        <div class="tab-bar-bottom"></div>
+      </button>
+      <button class="tab" onclick="switchTab('sci',this)">
+        <span class="tab-num">02</span>
+        <div class="tab-inner">
+          <span class="tab-icon">🔬</span>
+          <span class="tab-text">과학중점반<br>선택 가이드</span>
+        </div>
+        <div class="tab-bar-bottom" style="background:#e8c840"></div>
+      </button>
+      <button class="tab" onclick="switchTab('univ',this)">
+        <span class="tab-num">03</span>
+        <div class="tab-inner">
+          <span class="tab-icon">🏫</span>
+          <span class="tab-text">대학·학과<br>조회</span>
+        </div>
+        <div class="tab-bar-bottom"></div>
+      </button>
+      <button class="tab" onclick="switchTab('career',this)">
+        <span class="tab-num">04</span>
+        <div class="tab-inner">
+          <span class="tab-icon">🗺</span>
+          <span class="tab-text">진로 계열<br>조회</span>
+        </div>
+        <div class="tab-bar-bottom"></div>
+      </button>
+      <button class="tab" onclick="switchTab('rev',this)">
+        <span class="tab-num">05</span>
+        <div class="tab-inner">
+          <span class="tab-icon">🔍</span>
+          <span class="tab-text">과목<br>역조회</span>
+        </div>
+        <div class="tab-bar-bottom"></div>
+      </button>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════ -->
+  <!-- TAB 2: 과학중점반 선택 가이드 -->
+  <!-- ════════════════════════════════════════ -->
+  <div id="panel-sci" class="panel">
+
+    <div class="sci-banner">
+      <span class="sci-banner-icon">🔬</span>
+      <div>
+        <div class="sci-banner-title">과학중점반 희망 학생 선택 가이드</div>
+        <div class="sci-banner-sub">물리학·화학·생명과학·지구과학을 한 학기에 2과목씩 모두 선택 | 2학기 선택군2: 융합과학탐구 필수</div>
+      </div>
+    </div>
+
+    <!-- 핵심 규칙 -->
+    <div class="card">
+      <div class="card-head" style="background:#fdf5da;border-bottom:2px solid #e8c840">
+        <div>
+          <div class="card-title" style="color:#6a4e00">📌 과학중점반 필수 선택 규칙 (가정통신문 기준)</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="sci-rule-grid">
+          <div class="sci-rule-item sci-rule-red">
+            <div class="sri-head">선택군3 — 사회·과학 (학기별 택2)</div>
+            <div class="sri-body">
+              <div class="sri-row"><span class="sri-icon">✅</span><span><strong>물리학 + 화학 + 생명과학 + 지구과학</strong><br>4과목을 1·2학기에 나눠 모두 이수 (학기 배분은 자유)</span></div>
+              <div class="sri-row"><span class="sri-icon">💡</span><span>예시: 1학기 물리학+화학 / 2학기 생명과학+지구과학</span></div>
+            </div>
+          </div>
+          <div class="sci-rule-item sci-rule-blue">
+            <div class="sri-head">선택군2 — 수학·정보·융합 (학기별 택1)</div>
+            <div class="sri-body">
+              <div class="sri-row"><span class="sri-icon">✅</span><span><strong>2학기: 융합과학탐구 반드시 선택</strong></span></div>
+              <div class="sri-row"><span class="sri-icon">💡</span><span>1학기는 기하·인공지능기초·로봇과공학세계 등 자유 선택</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 학기별 선택 조합 예시 -->
+    <div class="card">
+      <div class="card-head" style="border-bottom:1.5px solid var(--border)">
+        <div class="card-title">📅 추천 학기별 선택 조합 예시</div>
+      </div>
+      <div class="card-body" style="padding:0">
+        <div class="sci-combo-table">
+          <div class="sct-head">
+            <div class="sct-col sct-lbl"></div>
+            <div class="sct-col">선택군1<span class="sct-sub">제2외국어 택1</span></div>
+            <div class="sct-col sct-gun2">선택군2<span class="sct-sub">수학·정보·융합 택1</span></div>
+            <div class="sct-col sct-gun3">선택군3<span class="sct-sub">사회·과학 택2<br>★과학중점반: 물·화·생·지 전부</span></div>
+          </div>
+          <!-- 예시 A -->
+          <div class="sct-row">
+            <div class="sct-col sct-lbl">
+              <div class="sct-case">예시 A</div>
+              <div class="sct-sem">1학기</div>
+            </div>
+            <div class="sct-col"><span class="sct-tag sct-g1">중국어<br>또는 일본어</span></div>
+            <div class="sct-col"><span class="sct-tag sct-g2">기하 ★권장</span></div>
+            <div class="sct-col sct-gun3-body">
+              <span class="sct-tag sct-sci">물리학</span>
+              <span class="sct-tag sct-sci">화학</span>
+            </div>
+          </div>
+          <div class="sct-row sct-row-2">
+            <div class="sct-col sct-lbl">
+              <div class="sct-sem">2학기</div>
+            </div>
+            <div class="sct-col"><span class="sct-tag sct-g1">한문<br>또는 다른 언어</span></div>
+            <div class="sct-col"><span class="sct-tag sct-g2 sct-must">융합과학탐구<br>🔴 필수</span></div>
+            <div class="sct-col sct-gun3-body">
+              <span class="sct-tag sct-sci">생명과학</span>
+              <span class="sct-tag sct-sci">지구과학</span>
+            </div>
+          </div>
+          <!-- 예시 B -->
+          <div class="sct-row sct-row-b">
+            <div class="sct-col sct-lbl">
+              <div class="sct-case">예시 B</div>
+              <div class="sct-sem">1학기</div>
+            </div>
+            <div class="sct-col"><span class="sct-tag sct-g1">일본어<br>또는 중국어</span></div>
+            <div class="sct-col"><span class="sct-tag sct-g2">인공지능기초</span></div>
+            <div class="sct-col sct-gun3-body">
+              <span class="sct-tag sct-sci">생명과학</span>
+              <span class="sct-tag sct-sci">지구과학</span>
+            </div>
+          </div>
+          <div class="sct-row sct-row-2">
+            <div class="sct-col sct-lbl">
+              <div class="sct-sem">2학기</div>
+            </div>
+            <div class="sct-col"><span class="sct-tag sct-g1">중국어회화<br>또는 일본어회화</span></div>
+            <div class="sct-col"><span class="sct-tag sct-g2 sct-must">융합과학탐구<br>🔴 필수</span></div>
+            <div class="sct-col sct-gun3-body">
+              <span class="sct-tag sct-sci">물리학</span>
+              <span class="sct-tag sct-sci">화학</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3학년 연계 -->
+    <div class="card" style="border:2px solid var(--purple-l)">
+      <div class="card-head" style="background:linear-gradient(135deg,var(--purple) 0%,var(--blue) 100%)">
+        <div class="card-title" style="color:#fff">🔗 과학중점반 → 3학년 연계 과목 추천</div>
+      </div>
+      <div class="card-body">
+        <div class="sci-y3-grid">
+          <div class="sy3-col">
+            <div class="sy3-head" style="color:var(--gun1)">물리학 이수 후 → 군4</div>
+            <div class="sy3-tags">
+              <span class="fi fi-y3g4">역학과 에너지</span>
+              <span class="fi fi-y3g4">전자기와 양자</span>
+              <span class="fi fi-y3g4">물리학 실험</span>
+            </div>
+          </div>
+          <div class="sy3-col">
+            <div class="sy3-head" style="color:#a05010">화학 이수 후 → 군4</div>
+            <div class="sy3-tags">
+              <span class="fi fi-y3g4">화학 반응의 세계</span>
+              <span class="fi fi-y3g4">물질과 에너지</span>
+              <span class="fi fi-y3g4">화학 실험</span>
+            </div>
+          </div>
+          <div class="sy3-col">
+            <div class="sy3-head" style="color:var(--green)">생명과학 이수 후 → 군4</div>
+            <div class="sy3-tags">
+              <span class="fi fi-y3g4">세포와 물질대사</span>
+              <span class="fi fi-y3g4">생물의 유전</span>
+              <span class="fi fi-y3g4">생명과학 실험</span>
+            </div>
+          </div>
+          <div class="sy3-col">
+            <div class="sy3-head" style="color:var(--teal)">지구과학 이수 후 → 군4</div>
+            <div class="sy3-tags">
+              <span class="fi fi-y3g4">지구시스템과학</span>
+              <span class="fi fi-y3g4">행성우주과학</span>
+              <span class="fi fi-y3g4">지구과학 실험</span>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:14px;padding:12px 16px;background:var(--gold-l);border-left:4px solid var(--gold);border-radius:var(--rs);font-size:14px;color:#5a4200;line-height:1.7">
+          <strong>📌 과학중점반 학생의 수학 선택 전략</strong><br>
+          선택군2 1학기에 <strong>기하</strong>를 선택하면 3학년 군5에서 <strong>미적분Ⅱ</strong>로 이어지는 이공계 핵심 수학 경로를 완성할 수 있습니다.<br>
+          서울대·연세대·고려대 등 자연·공학·의약학 계열 모두 기하+미적분Ⅱ를 강력 권장합니다.
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /panel-sci -->
+
+  <!-- ════════════════════════════════════════ -->
+  <!-- TAB 1: 과목 선택 & 3학년 연계 -->
+  <!-- ════════════════════════════════════════ -->
+  <div id="panel-sel" class="panel on">
+
+    <!-- 선택 현황 -->
+    <div class="sel-summary">
+      <div class="sel-sum-title">
+        <span>✅ 내가 선택한 2학년 과목 현황</span>
+        <button class="clear-btn" onclick="clearAll()">전체 초기화</button>
+      </div>
+      <div class="sel-counters">
+        <div class="sel-cnt" id="cnt-g1"><span class="gb g1">선택군1 1학기</span>&nbsp;<span class="cnt-num" id="n1a">0</span><span class="cnt-max">/1</span></div>
+        <div class="sel-cnt" id="cnt-g1b"><span class="gb g1">선택군1 2학기</span>&nbsp;<span class="cnt-num" id="n1b">0</span><span class="cnt-max">/1</span></div>
+        <div class="sel-cnt"><span class="gb g2">선택군2 1학기</span>&nbsp;<span class="cnt-num" id="n2a">0</span><span class="cnt-max">/1</span></div>
+        <div class="sel-cnt"><span class="gb g2">선택군2 2학기</span>&nbsp;<span class="cnt-num" id="n2b">0</span><span class="cnt-max">/1</span></div>
+        <div class="sel-cnt"><span class="gb g3">선택군3 1학기</span>&nbsp;<span class="cnt-num" id="n3a">0</span><span class="cnt-max">/2</span></div>
+        <div class="sel-cnt"><span class="gb g3">선택군3 2학기</span>&nbsp;<span class="cnt-num" id="n3b">0</span><span class="cnt-max">/2</span></div>
+      </div>
+      <div id="sel-tags-wrap" class="sel-tags">
+        <span class="sel-empty">아직 선택된 과목이 없습니다. 아래에서 과목을 클릭하세요.</span>
+      </div>
+    </div>
+
+    <!-- 필수 과목 안내 -->
+    <div class="card">
+      <div class="card-head" style="background:#2a2520">
+        <div>
+          <div class="card-title" style="color:#fff;font-size:17px">📌 2학년 필수 이수 과목 (선택 불필요)</div>
+          <div class="card-sub" style="color:rgba(255,255,255,.7)">아래 과목은 모든 학생이 반드시 이수합니다</div>
+        </div>
+      </div>
+      <div class="card-body" style="padding:0">
+        <table class="fixed-table">
+          <thead>
+            <tr>
+              <th>교과군</th><th>과목명</th><th>평가</th><th>단위</th><th>이수 학기</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>국어</td><td class="subj-name">문학</td><td><span class="eval-badge">5등급·수능</span></td><td>4</td><td><span class="fixed-badge">1학기</span></td></tr>
+            <tr><td>국어</td><td class="subj-name">화법과 언어</td><td><span class="eval-badge">5등급·수능</span></td><td>4</td><td><span class="fixed-badge">2학기</span></td></tr>
+            <tr><td>수학</td><td class="subj-name">대수</td><td><span class="eval-badge">5등급·수능</span></td><td>4</td><td><span class="fixed-badge">1학기</span></td></tr>
+            <tr><td>수학</td><td class="subj-name">미적분Ⅰ</td><td><span class="eval-badge">5등급·수능</span></td><td>4</td><td><span class="fixed-badge">2학기</span></td></tr>
+            <tr><td>영어</td><td class="subj-name">영어Ⅰ</td><td><span class="eval-badge">5등급·수능</span></td><td>4</td><td><span class="fixed-badge">1학기</span></td></tr>
+            <tr><td>영어</td><td class="subj-name">영어Ⅱ</td><td><span class="eval-badge">5등급·수능</span></td><td>4</td><td><span class="fixed-badge">2학기</span></td></tr>
+            <tr><td>체육</td><td class="subj-name">체육1 / 체육2</td><td><span class="eval-badge" style="background:#e8f0e8;color:#2a6a2a">3단계</span></td><td>2</td><td><span class="fixed-badge">1·2학기</span></td></tr>
+            <tr><td>예술</td><td class="subj-name">음악연주와창작 ↔ 미술창작</td><td><span class="eval-badge" style="background:#e8f0e8;color:#2a6a2a">3단계</span></td><td>3</td><td><span class="fixed-badge">학기별 교차</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- 선택군1: 제2외국어·한문 -->
+    <div class="card">
+      <div class="gun-header">
+        <span class="gb g1" style="font-size:13px;padding:6px 14px">선택군 1</span>
+        <div class="gun-header-text">
+          <div class="gun-name">제2외국어 · 한문 &nbsp;<span style="font-weight:400;font-size:15px;color:var(--text2)">1학기 택1 + 2학기 택1 (서로 다른 과목 가능, 동일 과목 불가)</span></div>
+          <div class="gun-eval">일반선택 = 5등급 상대평가 &nbsp;|&nbsp; 융합선택 = A·B·C 절대평가 &nbsp;|&nbsp; 진로선택 = A·B·C 절대평가</div>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--border)">
+        <div style="border-right:1px solid var(--border)">
+          <div style="padding:12px 20px;background:var(--bg);font-size:14px;font-weight:700;color:var(--orange);border-bottom:1px solid var(--border)">📅 1학기 — 1과목 선택</div>
+          <div class="subj-grid" id="grid-g1a"></div>
+        </div>
+        <div>
+          <div style="padding:12px 20px;background:var(--bg);font-size:14px;font-weight:700;color:var(--orange);border-bottom:1px solid var(--border)">📅 2학기 — 1과목 선택 (1학기와 동일 과목 불가)</div>
+          <div class="subj-grid" id="grid-g1b"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 선택군2: 수학·정보·융합 -->
+    <div class="card">
+      <div class="gun-header">
+        <span class="gb g2" style="font-size:13px;padding:6px 14px">선택군 2</span>
+        <div class="gun-header-text">
+          <div class="gun-name">수학 · 정보 · 융합 &nbsp;<span style="font-weight:400;font-size:15px;color:var(--text2)">학기별 택1 (1학기 1과목 + 2학기 1과목)</span></div>
+          <div class="gun-eval">진로선택 = A·B·C 절대평가 &nbsp;|&nbsp; 융합선택 = A·B·C 절대평가 &nbsp;|&nbsp; 
+          <span style="color:var(--red);font-weight:700">과학중점반: 2학기 융합과학탐구 필수</span></div>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--border)">
+        <div style="border-right:1px solid var(--border)">
+          <div style="padding:12px 20px;background:var(--bg);font-size:14px;font-weight:700;color:var(--blue);border-bottom:1px solid var(--border)">📅 1학기 — 1과목 선택</div>
+          <div class="subj-grid" id="grid-g2a"></div>
+        </div>
+        <div>
+          <div style="padding:12px 20px;background:var(--bg);font-size:14px;font-weight:700;color:var(--blue);border-bottom:1px solid var(--border)">📅 2학기 — 1과목 선택</div>
+          <div class="subj-grid" id="grid-g2b"></div>
+        </div>
+      </div>
+      <div class="science-notice" style="margin:0 18px 18px">
+        <strong>🔬 과학중점반 희망 학생 필독</strong><br>
+        • 선택군3에서 물리학·화학·생명과학·지구과학을 <strong>한 학기에 2과목씩 모두</strong> 선택해야 합니다.<br>
+        • 선택군2에서는 <strong>2학기에 반드시 융합과학탐구</strong>를 선택해야 합니다.
+      </div>
+    </div>
+
+    <!-- 선택군3: 사회·과학 -->
+    <div class="card">
+      <div class="gun-header">
+        <span class="gb g3" style="font-size:13px;padding:6px 14px">선택군 3</span>
+        <div class="gun-header-text">
+          <div class="gun-name">사회 · 과학 &nbsp;<span style="font-weight:400;font-size:15px;color:var(--text2)">학기별 택2 (1학기 2과목 + 2학기 2과목)</span></div>
+          <div class="gun-eval">일반선택 = 5등급 상대평가 (경쟁) &nbsp;|&nbsp; 
+          <span style="color:var(--red);font-weight:700">과학중점반: 물·화·생·지 4과목 모두 선택 (학기는 자유)</span></div>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--border)">
+        <div style="border-right:1px solid var(--border)">
+          <div style="padding:12px 20px;background:var(--bg);font-size:14px;font-weight:700;color:var(--text2);border-bottom:1px solid var(--border)">📅 1학기 — 2과목 선택</div>
+          <div class="subj-grid" id="grid-g3a"></div>
+        </div>
+        <div>
+          <div style="padding:12px 20px;background:var(--bg);font-size:14px;font-weight:700;color:var(--text2);border-bottom:1px solid var(--border)">📅 2학기 — 2과목 선택</div>
+          <div class="subj-grid" id="grid-g3b"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3학년 연계 추천 -->
+    <div class="y3-panel" id="y3-panel">
+      <div class="y3-head">
+        <div class="y3-head-t">🔗 3학년 연계 과목 추천</div>
+        <div class="y3-head-s">2학년에서 선택한 과목을 바탕으로 자동 생성 — 위에서 과목을 클릭하면 업데이트됩니다</div>
+      </div>
+      <div class="y3-body">
+        <div id="y3-result">
+          <div class="empty">
+            <div class="empty-icon">🔗</div>
+            <div class="empty-txt">위에서 2학년 과목을 선택하면 3학년 연계 추천이 표시됩니다</div>
+            <div class="empty-sub">과목 위계(2학년 → 3학년 심화)를 고려한 맞춤 추천</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /panel-sel -->
+
+  <!-- ════════════════════════════════════════ -->
+  <!-- TAB 2: 대학·학과 조회 -->
+  <!-- ════════════════════════════════════════ -->
+  <div id="panel-univ" class="panel">
+    <div class="card">
+      <div class="card-head" style="border-bottom:1.5px solid var(--border)">
+        <div>
+          <div class="card-title">🏫 대학과 학과를 선택하면 권장과목 + 2→3학년 수강 경로가 표시됩니다</div>
+          <div class="card-sub">권장과목을 발표한 대학의 공식 자료 기준 | 21개 대학, 80개+ 학과 수록</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">① 대학 선택</label>
+            <select class="form-sel" id="univ-sel" onchange="updateDepts()">
+              <option value="">대학을 선택하세요</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">② 학과(계열) 선택</label>
+            <select class="form-sel" id="dept-sel">
+              <option value="">학과를 선택하세요</option>
+            </select>
+          </div>
+          <button class="query-btn" onclick="doUnivQuery()">조회 →</button>
+        </div>
+      </div>
+    </div>
+    <div id="univ-result">
+      <div class="empty"><div class="empty-icon">🎓</div><div class="empty-txt">대학과 학과를 선택하고 조회하세요</div></div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════ -->
+  <!-- TAB 3: 진로 계열 조회 -->
+  <!-- ════════════════════════════════════════ -->
+  <div id="panel-career" class="panel">
+    <div class="career-grid" id="career-grid"></div>
+    <div id="career-result">
+      <div class="empty"><div class="empty-icon">🗺</div><div class="empty-txt">진로 계열을 선택하세요</div></div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════ -->
+  <!-- TAB 4: 과목 역조회 -->
+  <!-- ════════════════════════════════════════ -->
+  <div id="panel-rev" class="panel">
+    <div class="card">
+      <div class="card-head" style="border-bottom:1.5px solid var(--border)">
+        <div>
+          <div class="card-title">🔍 과목 클릭 → 권장하는 대학·학과 + 3학년 연계 과목 표시</div>
+          <div class="card-sub">2학년에서 선택 가능한 과목 기준</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="rev-filter" id="rev-filter"></div>
+        <div class="rev-grid" id="rev-grid"></div>
+      </div>
+    </div>
+    <div id="rev-result">
+      <div class="empty"><div class="empty-icon">🔍</div><div class="empty-txt">과목을 클릭하세요</div></div>
+    </div>
+  </div>
+
+</div><!-- /wrap -->
+
+<script>
+// ══════════════════════════════════════════════════
+// 가정통신문 기반 편제표 데이터
+// 선택군1: 제2외국어·한문 / 선택군2: 수학·정보·융합 / 선택군3: 사회·과학
+// ══════════════════════════════════════════════════
+
+// 선택군1 (1학기) - 제2외국어·한문
+const G1A = [
+  {n:'언어생활과 한자', t:'융합선택', e:'A·B·C', tip:'한자 어원과 언어의 역사를 배웁니다. 1학기만 개설.'},
+  {n:'중국어', t:'일반선택', e:'5등급', tip:'서울대 인문계열 유형① 필수 권장. 중어중문·국제학·무역 계열.'},
+  {n:'일본어', t:'일반선택', e:'5등급', tip:'서울대 인문계열 유형① 필수 권장. 일어일문·국제학 계열.'},
+];
+// 선택군1 (2학기) - 제2외국어·한문 (1학기와 동일 과목 불가)
+const G1B = [
+  {n:'언어생활과 한자', t:'융합선택', e:'A·B·C', tip:'※ 2학기에도 개설됩니다. 1학기와 중복 선택 불가.'},
+  {n:'중국어', t:'일반선택', e:'5등급', tip:'서울대 인문계열 유형① 필수 권장.'},
+  {n:'일본어', t:'일반선택', e:'5등급', tip:'서울대 인문계열 유형① 필수 권장.'},
+  {n:'한문', t:'일반선택', e:'5등급', tip:'서울대 인문계열 유형① 필수 권장. 한문학·국어국문·역사학 계열.'},
+  {n:'중국어 회화', t:'진로선택', e:'A·B·C', tip:'중국어 기이수자 권장. 실용 회화 중심.'},
+  {n:'일본어 회화', t:'진로선택', e:'A·B·C', tip:'일본어 기이수자 권장. 실용 회화 중심.'},
+];
+
+// 선택군2 (1학기) - 수학·정보·융합
+const G2A = [
+  {n:'기하', t:'진로선택', e:'A·B·C', tip:'★★★ 자연·공학·의약학 전 계열 강력 권장. 벡터·공간도형·이차곡선.'},
+  {n:'역사로 탐구하는 현대세계', t:'융합선택', e:'A·B·C', tip:'현대 세계를 역사적 맥락에서 탐구. 사학·국제학·사회학 계열.'},
+  {n:'사회문제탐구', t:'융합선택', e:'A·B·C', tip:'사회 문제 분석·해결 탐구. 사회복지·행정·환경·NGO 계열.'},
+  {n:'기후변화와 환경생태', t:'융합선택', e:'A·B·C', tip:'기후위기·탄소중립·생태계 탐구. 환경공학·생태학 계열.'},
+  {n:'로봇과 공학세계', t:'진로선택', e:'A·B·C', tip:'로봇 설계·센서·제어·프로그래밍. 기계·로봇·메카트로닉스 계열.'},
+  {n:'생활과학탐구', t:'진로선택', e:'A·B·C', tip:'일상 속 과학 원리 탐구. 식품·가정·생활과학·보건 계열.'},
+  {n:'인공지능기초', t:'진로선택', e:'A·B·C', tip:'★★★ AI·컴퓨터·SW 전 계열 강력 권장. AI 원리·머신러닝·딥러닝.'},
+];
+// 선택군2 (2학기)
+const G2B = [
+  {n:'기하', t:'진로선택', e:'A·B·C', tip:'★★★ 자연·공학·의약학 전 계열 강력 권장.'},
+  {n:'역사로 탐구하는 현대세계', t:'융합선택', e:'A·B·C', tip:'현대 세계를 역사적 맥락에서 탐구.'},
+  {n:'사회문제탐구', t:'융합선택', e:'A·B·C', tip:'사회 문제 분석·해결 탐구.'},
+  {n:'기후변화와 환경생태', t:'융합선택', e:'A·B·C', tip:'기후위기·탄소중립·생태계 탐구.'},
+  {n:'융합과학탐구', t:'융합선택', e:'A·B·C', tip:'★ 과학중점반 2학기 필수. 물리·화학·생명·지구과학 융합 탐구.'},
+  {n:'로봇과 공학세계', t:'진로선택', e:'A·B·C', tip:'로봇 설계·센서·제어·프로그래밍.'},
+  {n:'생활과학탐구', t:'진로선택', e:'A·B·C', tip:'일상 속 과학 원리 탐구.'},
+  {n:'인공지능기초', t:'진로선택', e:'A·B·C', tip:'★★★ AI·컴퓨터·SW 전 계열 강력 권장.'},
+];
+
+// 선택군3 (1학기) - 사회·과학 택2
+const G3A = [
+  {n:'세계사', t:'일반선택', e:'5등급', tip:'고대~현대 세계사 전반. 사학·국제학·외교 계열.'},
+  {n:'세계시민과 지리', t:'일반선택', e:'5등급', tip:'세계 지역별 자연·문화·환경. 지리학·국제학·관광 계열.'},
+  {n:'사회와 문화', t:'일반선택', e:'5등급', tip:'★★★ 사회과학·경영·경제 전체 강력 권장. 5등급 경쟁.'},
+  {n:'현대사회와 윤리', t:'일반선택', e:'5등급', tip:'현대 사회 윤리 쟁점. 법학·철학·사범대·사회복지 계열.'},
+  {n:'물리학', t:'일반선택', e:'5등급', tip:'★★★ 자연·공학·의약학 전 계열 강력 권장. 힘·운동·에너지·전기.'},
+  {n:'화학', t:'일반선택', e:'5등급', tip:'★★★ 의약학·화학·생명·환경공학 강력 권장. 5등급 경쟁.'},
+  {n:'생명과학', t:'일반선택', e:'5등급', tip:'★★★ 의약학·생물학·간호 강력 권장. 5등급 경쟁.'},
+  {n:'지구과학', t:'일반선택', e:'5등급', tip:'지구과학·환경·해양·기상 계열. 5등급 경쟁.'},
+];
+// 선택군3 (2학기) - 사회·과학 택2 (동일 과목 중복 불가 원칙)
+const G3B = [
+  {n:'세계사', t:'일반선택', e:'5등급', tip:'고대~현대 세계사 전반.'},
+  {n:'세계시민과 지리', t:'일반선택', e:'5등급', tip:'세계 지역별 자연·문화·환경.'},
+  {n:'사회와 문화', t:'일반선택', e:'5등급', tip:'★★★ 사회과학·경영·경제 전체 강력 권장.'},
+  {n:'현대사회와 윤리', t:'일반선택', e:'5등급', tip:'현대 사회 윤리 쟁점.'},
+  {n:'물리학', t:'일반선택', e:'5등급', tip:'★★★ 자연·공학·의약학 전 계열 강력 권장.'},
+  {n:'화학', t:'일반선택', e:'5등급', tip:'★★★ 의약학·화학·생명·환경공학 강력 권장.'},
+  {n:'생명과학', t:'일반선택', e:'5등급', tip:'★★★ 의약학·생물학·간호 강력 권장.'},
+  {n:'지구과학', t:'일반선택', e:'5등급', tip:'지구과학·환경·해양·기상 계열.'},
+];
+
+// 2학년 과목 → 3학년 연계 맵
+const CHAIN = {
+  '물리학':     {gun:'군4', recs:['역학과 에너지','전자기와 양자','물리학 실험'], note:'물리학(2학년) → 역학과에너지·전자기와양자는 공학·자연과학계열 학종에서 강력히 권장되는 위계 경로입니다.'},
+  '화학':       {gun:'군4', recs:['화학 반응의 세계','물질과 에너지','화학 실험'], note:'화학(2학년) → 화학반응의세계·물질과에너지 위계는 의약학·화학공학 계열에서 필수 수준입니다.'},
+  '생명과학':   {gun:'군4', recs:['세포와 물질대사','생물의 유전','생명과학 실험'], note:'생명과학(2학년) → 세포와물질대사·생물의유전은 서울대 의예과가 명시한 핵심 이수 경로입니다.'},
+  '지구과학':   {gun:'군4', recs:['지구시스템과학','행성우주과학','지구과학 실험'], note:'지구과학(2학년) → 지구시스템과학·행성우주과학 위계가 지구과학·환경 계열에 권장됩니다.'},
+  '기후변화와 환경생태': {gun:'군4', recs:['지구시스템과학','생명과학 실험','화학 실험'], note:'기후변화와환경생태 → 지구시스템과학으로 심화하는 경로가 환경공학·생태학 계열에 유리합니다.'},
+  '융합과학탐구': {gun:'군4', recs:['물리학 실험','화학 실험','생명과학 실험','지구과학 실험'], note:'융합과학탐구 이수 후 관련 실험 과목으로 세특을 강화하면 자연·공학·의약학 계열에 도움이 됩니다.'},
+  '기하':       {gun:'군5', recs:['미적분Ⅱ','전문수학'], note:'기하(2학년) → 미적분Ⅱ는 이공계·의약학 전 계열이 가장 많이 요구하는 연계 경로입니다. 두 과목 모두 이수를 강력 권장합니다.'},
+  '인공지능기초': {gun:'군5', recs:['정보과학','프로그래밍','창의 공학 설계'], note:'인공지능기초(2학년) → 정보과학·프로그래밍은 AI·컴퓨터·SW공학 계열의 핵심 연계 경로입니다.'},
+  '로봇과 공학세계': {gun:'군5', recs:['창의 공학 설계','프로그래밍'], note:'로봇과공학세계 → 창의공학설계·프로그래밍으로 이어지면 기계·로봇·전기전자 계열에 권장됩니다.'},
+  '생활과학탐구': {gun:'군5', recs:['아동 발달과 부모'], note:'생활과학탐구 → 아동발달과부모 등 생활·복지 관련 심화를 고려하세요.'},
+  '세계사':     {gun:'군5', recs:['동아시아 역사기행','인문학과 윤리','정치'], note:'세계사(2학년) → 동아시아역사기행·인문학과윤리로 이어지는 경로가 사학·국제학 계열에 권장됩니다.'},
+  '세계시민과 지리': {gun:'군5', recs:['도시의 미래 탐구','여행지리'], note:'세계시민과지리 → 도시의미래탐구·여행지리로 지리·도시공학 심화를 고려하세요.'},
+  '사회와 문화': {gun:'군5', recs:['금융과 경제생활','윤리문제 탐구','정치'], note:'사회와문화(2학년) → 금융과경제생활·정치로 이어지면 경영·경제·사회과학 계열에 유리합니다.'},
+  '현대사회와 윤리': {gun:'군5', recs:['정치','인문학과 윤리','윤리문제 탐구'], note:'현대사회와윤리 → 정치·윤리문제탐구로 심화하면 법학·행정·철학 계열에 권장됩니다.'},
+  '역사로 탐구하는 현대세계': {gun:'군5', recs:['동아시아 역사기행','인문학과 윤리'], note:'역사로탐구하는현대세계 → 동아시아역사기행·인문학과윤리로 심화하세요.'},
+  '사회문제탐구': {gun:'군5', recs:['윤리문제 탐구','도시의 미래 탐구'], note:'사회문제탐구 → 윤리문제탐구·도시의미래탐구로 사회과학 심화를 고려하세요.'},
+  '중국어':     {gun:'군5', recs:['중국 문화'], note:'중국어(2학년) → 중국문화로 이어지면 중어중문·국제학·무역 계열에 유리합니다. 서울대 인문계열 유형① 핵심 과목입니다.'},
+  '일본어':     {gun:'군5', recs:['일본 문화'], note:'일본어(2학년) → 일본문화로 이어지면 일어일문·국제학·관광 계열에 유리합니다. 서울대 인문계열 유형① 핵심 과목입니다.'},
+  '한문':       {gun:'군5', recs:['한문 고전 읽기'], note:'한문(2학년) → 한문고전읽기로 이어지면 한문학·국어국문·역사학 계열에 유리합니다. 서울대 인문계열 유형① 핵심 과목입니다.'},
+  '언어생활과 한자': {gun:'군5', recs:['한문 고전 읽기'], note:'언어생활과한자 → 한문고전읽기로 인문학적 소양을 심화하세요.'},
+  '중국어 회화': {gun:'군5', recs:['중국 문화'], note:'중국어회화 → 중국문화로 심화하면 실용 중국어 역량을 보여줄 수 있습니다.'},
+  '일본어 회화': {gun:'군5', recs:['일본 문화'], note:'일본어회화 → 일본문화로 심화하면 실용 일본어 역량을 보여줄 수 있습니다.'},
+};
+
+// 대학·학과 데이터
+const UNIV_DATA = [
+  {u:'서울대학교',d:'의예과',core:'기하 / 생명과학 / 세포와 물질대사 / 생물의 유전',rec:'물리학 / 화학 / 역학과 에너지 / 화학 반응의 세계 / 물리학 실험',y2:'기하(선2), 생명과학(선3)',y3:'세포와 물질대사(군4), 생물의 유전(군4), 역학과 에너지(군4), 미적분Ⅱ(군5)',note:'수학: 기하+미적분Ⅱ 필수. 과학: 생명과학 이수 후 세포와물질대사·생물의유전 포함 진로선택 3과목 이상.',src:'서울대 2028 공식발표(2025.6.30) 유형②'},
+  {u:'서울대학교',d:'치의학과',core:'기하 또는 미적분Ⅱ / 화학 / 생명과학',rec:'세포와 물질대사 / 화학 반응의 세계 / 생명과학 실험',y2:'기하(선2), 화학(선3), 생명과학(선3)',y3:'세포와 물질대사(군4), 화학 반응의 세계(군4)',note:'과학 진로선택 3과목 이상.',src:'서울대 2028 공식발표 유형②'},
+  {u:'서울대학교',d:'약학계열',core:'기하 또는 미적분Ⅱ / 화학 / 생명과학',rec:'세포와 물질대사 / 화학 반응의 세계 / 물질과 에너지',y2:'기하(선2), 화학(선3), 생명과학(선3)',y3:'세포와 물질대사(군4), 화학 반응의 세계(군4), 물질과 에너지(군4), 미적분Ⅱ(군5)',note:'과학 진로선택 3과목 이상.',src:'서울대 2028 공식발표(2025.6.30) 유형②'},
+  {u:'서울대학교',d:'컴퓨터공학부',core:'기하 / 물리학 / 인공지능기초',rec:'전자기와 양자 / 역학과 에너지 / 데이터 과학',y2:'기하(선2), 물리학(선3), 인공지능기초(선2)',y3:'전자기와 양자(군4), 역학과 에너지(군4), 미적분Ⅱ(군5)',note:'물리학 우선. 미적분Ⅱ 필수.',src:'서울대 2028 공식발표(2025.6.30) 유형②'},
+  {u:'서울대학교',d:'전기정보공학부',core:'기하 / 물리학',rec:'전자기와 양자 / 역학과 에너지',y2:'기하(선2), 물리학(선3)',y3:'전자기와 양자(군4), 역학과 에너지(군4), 미적분Ⅱ(군5)',note:'',src:'서울대 2028 공식발표(2025.6.30) 유형②'},
+  {u:'서울대학교',d:'기계공학부',core:'기하 / 물리학',rec:'역학과 에너지 / 전자기와 양자 / 창의 공학 설계',y2:'기하(선2), 물리학(선3)',y3:'역학과 에너지(군4), 전자기와 양자(군4), 미적분Ⅱ(군5)',note:'',src:'서울대 2028 공식발표(2025.6.30) 유형②'},
+  {u:'서울대학교',d:'화학생물공학부',core:'기하 / 화학',rec:'화학 반응의 세계 / 물질과 에너지 / 생명과학',y2:'기하(선2), 화학(선3)',y3:'화학 반응의 세계(군4), 물질과 에너지(군4), 미적분Ⅱ(군5)',note:'화학 우선.',src:'서울대 2028 공식발표(2025.6.30) 유형②'},
+  {u:'서울대학교',d:'수학과',core:'기하 / 전문수학',rec:'확률과 통계 / 물리학',y2:'기하(선2)',y3:'미적분Ⅱ(군5), 전문수학(군5)',note:'수학 심화 권장.',src:'서울대 2028 공식발표(2025.6.30) 유형②'},
+  {u:'서울대학교',d:'물리학과',core:'기하 / 물리학',rec:'역학과 에너지 / 전자기와 양자 / 행성우주과학',y2:'기하(선2), 물리학(선3)',y3:'역학과 에너지(군4), 전자기와 양자(군4), 행성우주과학(군4), 미적분Ⅱ(군5)',note:'',src:'서울대 2028 공식발표(2025.6.30) 유형②'},
+  {u:'서울대학교',d:'화학과',core:'기하 / 화학',rec:'화학 반응의 세계 / 물질과 에너지 / 화학 실험',y2:'기하(선2), 화학(선3)',y3:'화학 반응의 세계(군4), 물질과 에너지(군4), 미적분Ⅱ(군5)',note:'',src:'서울대 2028 공식발표(2025.6.30) 유형②'},
+  {u:'서울대학교',d:'생명과학부',core:'기하 또는 미적분Ⅱ / 화학 / 생명과학',rec:'세포와 물질대사 / 생물의 유전 / 생명과학 실험',y2:'기하(선2), 화학(선3), 생명과학(선3)',y3:'세포와 물질대사(군4), 생물의 유전(군4), 생명과학 실험(군4)',note:'생명과학 우선.',src:'서울대 2028 공식발표(2025.6.30) 유형②'},
+  {u:'서울대학교',d:'지구환경과학부',core:'기하 또는 미적분Ⅱ / 지구과학',rec:'지구시스템과학 / 행성우주과학 / 기후변화와 환경생태',y2:'기하(선2), 지구과학(선3)',y3:'지구시스템과학(군4), 행성우주과학(군4)',note:'지구과학 우선.',src:'서울대 2028 공식발표(2025.6.30) 유형②'},
+  {u:'서울대학교',d:'경영대학',core:'제2외국어/한문 1과목 이상',rec:'사회와 문화 / 금융과 경제생활',y2:'중국어·일본어·한문 중 1과목(선1), 사회와 문화(선3)',y3:'금융과 경제생활(군5)',note:'제2외국어/한문 1과목 이상이 유일한 공식 핵심권장.',src:'서울대 2028 공식발표 유형①'},
+  {u:'서울대학교',d:'경제학부',core:'(공식 핵심권장 없음)',rec:'기하 또는 미적분Ⅱ / 사회와 문화',y2:'기하(선2) 또는 미적분Ⅱ, 사회와 문화(선3)',y3:'미적분Ⅱ(군5), 금융과 경제생활(군5)',note:'경제학부는 공식 핵심권장과목 없음. 기하·미적분Ⅱ는 일반 권장.',src:'서울대 2028 공식발표 유형①'},
+  {u:'서울대학교',d:'법학(법대)',core:'제2외국어/한문 1과목 이상',rec:'사회와 문화 / 현대사회와 윤리 / 정치',y2:'제2외국어/한문(선1), 사회와 문화(선3), 현대사회와 윤리(선3)',y3:'정치(군5), 인문학과 윤리(군5)',note:'제2외국어/한문 1과목 이상이 공식 핵심.',src:'서울대 2028 공식발표 유형①'},
+  {u:'서울대학교',d:'인문대학(국문·사학·철학)',core:'제2외국어/한문 1과목 이상',rec:'세계사 / 현대사회와 윤리',y2:'제2외국어/한문(선1), 세계사(선3)',y3:'인문학과 윤리(군5), 한문 고전 읽기(군5)',note:'제2외국어/한문 1과목 이상이 공식 핵심.',src:'서울대 2028 공식발표 유형①'},
+  // 연세대
+  {u:'연세대학교',d:'의예과',core:'물리학 / 화학 / 생명과학',rec:'기하 / 세포와 물질대사 / 생물의 유전 / 화학 반응의 세계',y2:'기하(선2), 화학(선3), 생명과학(선3)',y3:'세포와 물질대사(군4), 생물의 유전(군4), 화학 반응의 세계(군4), 미적분Ⅱ(군5)',note:'미적분Ⅱ 권장.',src:'연세대 2026학년도 학종 가이드'},
+  {u:'연세대학교',d:'치의예과',core:'화학 / 생명과학',rec:'기하 / 세포와 물질대사 / 화학 반응의 세계',y2:'기하(선2), 화학(선3), 생명과학(선3)',y3:'세포와 물질대사(군4), 화학 반응의 세계(군4), 미적분Ⅱ(군5)',note:'',src:'연세대 학종 가이드'},
+  {u:'연세대학교',d:'약학과',core:'화학 / 생명과학',rec:'기하 / 화학 반응의 세계 / 물질과 에너지',y2:'기하(선2), 화학(선3), 생명과학(선3)',y3:'화학 반응의 세계(군4), 물질과 에너지(군4), 미적분Ⅱ(군5)',note:'',src:'연세대 학종 가이드'},
+  {u:'연세대학교',d:'전기전자·반도체공학',core:'물리학 / 기하',rec:'전자기와 양자 / 역학과 에너지',y2:'기하(선2), 물리학(선3)',y3:'전자기와 양자(군4), 역학과 에너지(군4), 미적분Ⅱ(군5)',note:'',src:'연세대 학종 가이드'},
+  {u:'연세대학교',d:'컴퓨터과학·AI',core:'물리학 / 기하',rec:'인공지능기초 / 데이터 과학 / 정보과학',y2:'기하(선2), 물리학(선3), 인공지능기초(선2)',y3:'미적분Ⅱ(군5), 정보과학(군5), 프로그래밍(군5)',note:'',src:'연세대 학종 가이드'},
+  {u:'연세대학교',d:'경영·경제학',core:'사회와 문화',rec:'기하 / 금융과 경제생활',y2:'사회와 문화(선3)',y3:'금융과 경제생활(군5)',note:'인문계',src:'연세대 학종 가이드'},
+  // 고려대
+  {u:'고려대학교',d:'의과대학',core:'화학 / 생명과학',rec:'기하 / 세포와 물질대사 / 생물의 유전',y2:'기하(선2), 화학(선3), 생명과학(선3)',y3:'세포와 물질대사(군4), 생물의 유전(군4), 미적분Ⅱ(군5)',note:'학종 서류평가 반영.',src:'고려대 2026학년도 학종 가이드'},
+  {u:'고려대학교',d:'전기전자·반도체·컴퓨터',core:'기하 / 물리학',rec:'전자기와 양자 / 역학과 에너지',y2:'기하(선2), 물리학(선3)',y3:'전자기와 양자(군4), 역학과 에너지(군4), 미적분Ⅱ(군5)',note:'자연계 기하 우선.',src:'고려대 학종 가이드'},
+  {u:'고려대학교',d:'기계·항공·신소재공학',core:'기하 / 물리학 또는 화학',rec:'역학과 에너지 / 화학 반응의 세계',y2:'기하(선2), 물리학(선3)',y3:'역학과 에너지(군4), 미적분Ⅱ(군5)',note:'',src:'고려대 학종 가이드'},
+  {u:'고려대학교',d:'경영·경제학',core:'사회와 문화',rec:'기하 / 금융과 경제생활',y2:'사회와 문화(선3)',y3:'금융과 경제생활(군5)',note:'인문계',src:'고려대 학종 가이드'},
+  {u:'고려대학교',d:'법·행정·정치외교학',core:'사회와 문화 / 현대사회와 윤리',rec:'정치 / 국제관계의 이해 / 세계사',y2:'사회와 문화(선3), 현대사회와 윤리(선3), 세계사(선3)',y3:'정치(군5), 인문학과 윤리(군5)',note:'인문계',src:'고려대 학종 가이드'},
+  // 성균관대
+  {u:'성균관대학교',d:'의예과',core:'화학 / 생명과학',rec:'기하 / 세포와 물질대사 / 생물의 유전',y2:'기하(선2), 화학(선3), 생명과학(선3)',y3:'세포와 물질대사(군4), 생물의 유전(군4), 미적분Ⅱ(군5)',note:'5개교 공동연구 기반.',src:'성균관대 2026학년도 학종 가이드'},
+  {u:'성균관대학교',d:'소프트웨어·AI학과',core:'물리학 / 인공지능기초',rec:'기하 / 데이터 과학 / 정보과학',y2:'기하(선2), 물리학(선3), 인공지능기초(선2)',y3:'미적분Ⅱ(군5), 정보과학(군5)',note:'SW특기자 전형 병행.',src:'성균관대 학종 가이드'},
+  {u:'성균관대학교',d:'전자전기·반도체공학',core:'물리학',rec:'기하 / 전자기와 양자 / 역학과 에너지',y2:'기하(선2), 물리학(선3)',y3:'전자기와 양자(군4), 역학과 에너지(군4), 미적분Ⅱ(군5)',note:'5개교 공동연구.',src:'성균관대 학종 가이드'},
+  // 경희대
+  {u:'경희대학교',d:'의예과',core:'화학 / 생명과학 / 세포와물질대사 / 화학반응의세계',rec:'물리학 / 물질과 에너지 / 생물의 유전',y2:'기하(선2), 화학(선3), 생명과학(선3)',y3:'세포와 물질대사(군4), 화학 반응의 세계(군4), 생물의 유전(군4), 미적분Ⅱ(군5)',note:'수학 4과목 전부 핵심. 과학은 화학·생명 계열 6개 중 3과목 선택.',src:'경희대 2025.8 수정안'},
+  {u:'경희대학교',d:'한의예과',core:'화학 / 생명과학 / 세포와 물질대사 / 생물의 유전',rec:'물리학 / 물질과 에너지 / 화학 반응의 세계',y2:'기하(선2), 화학(선3), 생명과학(선3)',y3:'세포와 물질대사(군4), 생물의 유전(군4), 화학 반응의 세계(군4), 미적분Ⅱ(군5)',note:'수학 4과목+과학 4과목 전부 핵심.',src:'경희대 2025.8 수정안'},
+  {u:'경희대학교',d:'치의예과',core:'화학 / 생명과학 / 세포와 물질대사 / 생물의 유전',rec:'물리학 / 물질과 에너지',y2:'기하(선2), 화학(선3), 생명과학(선3)',y3:'세포와 물질대사(군4), 생물의 유전(군4), 미적분Ⅱ(군5)',note:'수학 4과목+과학 4과목 전부 핵심.',src:'경희대 2025.8 수정안'},
+  {u:'경희대학교',d:'약학과',core:'화학 / 생명과학 / 세포와물질대사 / 화학반응의세계',rec:'물리학',y2:'기하(선2), 화학(선3), 생명과학(선3)',y3:'세포와 물질대사(군4), 화학 반응의 세계(군4), 미적분Ⅱ(군5)',note:'',src:'경희대 2025.8 수정안'},
+  {u:'경희대학교',d:'소프트웨어·AI',core:'기하 / 인공지능기초',rec:'정보과학 / 프로그래밍',y2:'기하(선2), 인공지능기초(선2)',y3:'미적분Ⅱ(군5), 정보과학(군5), 프로그래밍(군5)',note:'수학 5과목 전부 핵심.',src:'경희대 2025.8 수정안'},
+  // 중앙대
+  {u:'중앙대학교',d:'의학부',core:'화학 / 생명과학',rec:'기하 / 세포와 물질대사 / 생물의 유전 / 화학 반응의 세계',y2:'기하(선2), 화학(선3), 생명과학(선3)',y3:'세포와 물질대사(군4), 생물의 유전(군4), 화학 반응의 세계(군4), 미적분Ⅱ(군5)',note:'5개교 공동연구 기반.',src:'중앙대 2026학년도 학종 가이드'},
+  {u:'중앙대학교',d:'소프트웨어·AI·전자전기',core:'물리학 / 기하',rec:'전자기와 양자 / 인공지능기초',y2:'기하(선2), 물리학(선3), 인공지능기초(선2)',y3:'전자기와 양자(군4), 역학과 에너지(군4), 미적분Ⅱ(군5)',note:'',src:'중앙대 학종 가이드'},
+  {u:'중앙대학교',d:'화학공학·생명공학',core:'화학 / 생명과학',rec:'기하 / 화학 반응의 세계 / 세포와 물질대사',y2:'기하(선2), 화학(선3), 생명과학(선3)',y3:'화학 반응의 세계(군4), 세포와 물질대사(군4), 미적분Ⅱ(군5)',note:'',src:'중앙대 학종 가이드'},
+  // 한양대
+  {u:'한양대학교',d:'의예과',core:'화학 / 생명과학',rec:'기하 / 세포와 물질대사 / 생물의 유전',y2:'기하(선2), 화학(선3), 생명과학(선3)',y3:'세포와 물질대사(군4), 생물의 유전(군4), 미적분Ⅱ(군5)',note:'',src:'한양대 학종 가이드북'},
+  {u:'한양대학교',d:'융합전자·반도체공학',core:'물리학',rec:'기하 / 전자기와 양자 / 역학과 에너지',y2:'기하(선2), 물리학(선3)',y3:'전자기와 양자(군4), 역학과 에너지(군4), 미적분Ⅱ(군5)',note:'',src:'한양대 학종 가이드'},
+  {u:'한양대학교',d:'컴퓨터소프트웨어·AI',core:'물리학 / 인공지능기초',rec:'기하 / 데이터 과학',y2:'기하(선2), 물리학(선3), 인공지능기초(선2)',y3:'미적분Ⅱ(군5), 정보과학(군5), 프로그래밍(군5)',note:'',src:'한양대 학종 가이드'},
+  // 충남대
+  {u:'충남대학교',d:'의예과',core:'화학 / 생명과학',rec:'기하 / 세포와 물질대사 / 생물의 유전',y2:'기하(선2), 화학(선3), 생명과학(선3)',y3:'세포와 물질대사(군4), 생물의 유전(군4), 미적분Ⅱ(군5)',note:'지역인재.',src:'충남대 지역인재'},
+  {u:'충남대학교',d:'약학과',core:'화학 / 생명과학',rec:'기하 / 화학 반응의 세계 / 세포와 물질대사',y2:'기하(선2), 화학(선3), 생명과학(선3)',y3:'화학 반응의 세계(군4), 세포와 물질대사(군4), 미적분Ⅱ(군5)',note:'지역인재.',src:'충남대 지역인재'},
+  {u:'충남대학교',d:'전기·전자·컴퓨터공학',core:'물리학',rec:'기하 / 전자기와 양자 / 인공지능기초',y2:'기하(선2), 물리학(선3)',y3:'전자기와 양자(군4), 미적분Ⅱ(군5)',note:'지역인재.',src:'충남대 지역인재'},
+  {u:'충남대학교',d:'경영·경제학',core:'사회와 문화',rec:'기하',y2:'사회와 문화(선3)',y3:'금융과 경제생활(군5)',note:'인문계 / 지역인재.',src:'충남대 지역인재'},
+  // 지역 대학
+  {u:'단국대학교(천안)',d:'의예과',core:'화학 / 생명과학',rec:'기하 / 세포와 물질대사 / 생물의 유전',y2:'기하(선2), 화학(선3), 생명과학(선3)',y3:'세포와 물질대사(군4), 생물의 유전(군4), 미적분Ⅱ(군5)',note:'대교협 기준.',src:'단국대 대교협 기준'},
+  {u:'단국대학교(천안)',d:'치의예과',core:'화학 / 생명과학',rec:'기하 / 화학 반응의 세계',y2:'기하(선2), 화학(선3), 생명과학(선3)',y3:'화학 반응의 세계(군4), 미적분Ⅱ(군5)',note:'대교협 기준.',src:'단국대 대교협 기준'},
+  {u:'순천향대학교',d:'의예과',core:'화학 / 생명과학',rec:'기하 / 세포와 물질대사 / 생물의 유전',y2:'기하(선2), 화학(선3), 생명과학(선3)',y3:'세포와 물질대사(군4), 생물의 유전(군4), 미적분Ⅱ(군5)',note:'충남형지역인재.',src:'순천향대 지역인재'},
+  {u:'순천향대학교',d:'간호·보건계열',core:'생명과학',rec:'기하 / 화학 / 세포와 물질대사',y2:'생명과학(선3)',y3:'세포와 물질대사(군4), 미적분Ⅱ(군5)',note:'충남형지역인재.',src:'순천향대 지역인재'},
+  {u:'을지대학교',d:'의예과',core:'화학 / 생명과학',rec:'기하 / 세포와 물질대사',y2:'화학(선3), 생명과학(선3)',y3:'세포와 물질대사(군4), 미적분Ⅱ(군5)',note:'대전·성남 캠퍼스.',src:'을지대 기준'},
+  {u:'을지대학교',d:'간호학과',core:'생명과학',rec:'화학 / 세포와 물질대사',y2:'생명과학(선3)',y3:'세포와 물질대사(군4)',note:'대전·의정부 캠퍼스.',src:'을지대 기준'},
+  {u:'건양대학교',d:'의학과',core:'화학 / 생명과학',rec:'기하 / 세포와 물질대사 / 생물의 유전',y2:'기하(선2), 화학(선3), 생명과학(선3)',y3:'세포와 물질대사(군4), 생물의 유전(군4), 미적분Ⅱ(군5)',note:'충청 지역인재.',src:'건양대 지역인재'},
+  {u:'선문대학교',d:'간호학과',core:'생명과학',rec:'화학 / 세포와 물질대사',y2:'생명과학(선3)',y3:'세포와 물질대사(군4)',note:'충청권 지역인재.',src:'선문대 지역인재'},
+  {u:'호서대학교',d:'간호학과',core:'생명과학',rec:'화학 / 세포와 물질대사',y2:'생명과학(선3)',y3:'세포와 물질대사(군4)',note:'충청권 지역인재.',src:'호서대 지역인재'},
+  // 이화여대
+  {u:'이화여자대학교',d:'의예과',core:'화학 / 생명과학',rec:'기하 / 세포와 물질대사 / 생물의 유전 / 화학 반응의 세계',y2:'기하(선2), 화학(선3), 생명과학(선3)',y3:'세포와 물질대사(군4), 생물의 유전(군4), 화학 반응의 세계(군4), 미적분Ⅱ(군5)',note:'',src:'이화여대 2028 공식발표'},
+  {u:'이화여자대학교',d:'약학과',core:'화학 / 생명과학',rec:'기하 / 세포와 물질대사 / 화학 반응의 세계',y2:'기하(선2), 화학(선3), 생명과학(선3)',y3:'세포와 물질대사(군4), 화학 반응의 세계(군4), 미적분Ⅱ(군5)',note:'',src:'이화여대 2028 공식발표'},
+  {u:'이화여자대학교',d:'컴퓨터공학과',core:'물리학 / 인공지능기초',rec:'기하 / 데이터 과학 / 정보과학',y2:'기하(선2), 물리학(선3), 인공지능기초(선2)',y3:'미적분Ⅱ(군5), 정보과학(군5)',note:'',src:'이화여대 2028 공식발표'},
+  {u:'이화여자대학교',d:'경영학부',core:'사회와 문화',rec:'기하 / 금융과 경제생활',y2:'사회와 문화(선3)',y3:'금융과 경제생활(군5)',note:'인문계.',src:'이화여대 2028 공식발표'},
+  // 숙명여대
+  {u:'숙명여자대학교',d:'의약학·간호계열',core:'화학 / 생명과학',rec:'기하 / 세포와 물질대사 / 생물의 유전 / 화학 반응의 세계',y2:'기하(선2), 화학(선3), 생명과학(선3)',y3:'세포와 물질대사(군4), 생물의 유전(군4), 미적분Ⅱ(군5)',note:'평가 불이익 없는 참고용.',src:'숙명여대 SM 진로·학업 설계 가이드'},
+  {u:'숙명여자대학교',d:'컴퓨터과학·AI',core:'기하 / 인공지능기초',rec:'데이터 과학 / 정보과학',y2:'기하(선2), 인공지능기초(선2)',y3:'미적분Ⅱ(군5), 정보과학(군5)',note:'수학②(기하·미적분Ⅱ)가 핵심.',src:'숙명여대 SM 진로·학업 설계 가이드'},
+  {u:'숙명여자대학교',d:'경영·경제·통상학부',core:'사회와 문화',rec:'기하 / 금융과 경제생활',y2:'사회와 문화(선3)',y3:'금융과 경제생활(군5)',note:'인문계 기반.',src:'숙명여대 SM 진로·학업 설계 가이드'},
+];
+
+// 진로 계열 데이터
+const CAREER_DATA = [
+  {id:'med',icon:'🏥',name:'의약학',subs:[
+    {sub:'의대·치대·한의대',core:'기하 / 화학 / 생명과학',rec:'물리학 / 역학과 에너지 / 화학 반응의 세계',y2:'기하(선2), 화학(선3), 생명과학(선3)',y3:'세포와 물질대사(군4), 생물의 유전(군4), 화학 반응의 세계(군4), 미적분Ⅱ(군5)',src:'서울대·연세대·고려대·경희대·이화여대·단국대·순천향대'},
+    {sub:'약학·수의학·간호학',core:'화학 / 생명과학',rec:'기하 / 세포와 물질대사 / 화학 반응의 세계',y2:'기하(선2), 화학(선3), 생명과학(선3)',y3:'세포와 물질대사(군4), 화학 반응의 세계(군4), 미적분Ⅱ(군5)',src:'서울대·연세대·성균관대·이화여대·충남대·순천향대·을지대·건양대'},
+  ]},
+  {id:'eng',icon:'🔧',name:'공학',subs:[
+    {sub:'기계·자동차·항공',core:'기하 / 물리학',rec:'역학과 에너지 / 전자기와 양자 / 창의 공학 설계',y2:'기하(선2), 물리학(선3)',y3:'역학과 에너지(군4), 전자기와 양자(군4), 미적분Ⅱ(군5), 창의 공학 설계(군5)',src:'서울대·고려대·연세대·한양대'},
+    {sub:'전기·전자·반도체',core:'기하 / 물리학',rec:'전자기와 양자 / 역학과 에너지 / 인공지능기초',y2:'기하(선2), 물리학(선3)',y3:'전자기와 양자(군4), 역학과 에너지(군4), 미적분Ⅱ(군5)',src:'서울대·성균관대·한양대·연세대·충남대'},
+    {sub:'화학·신소재·환경',core:'기하 / 화학',rec:'화학 반응의 세계 / 물질과 에너지 / 화학 실험',y2:'기하(선2), 화학(선3)',y3:'화학 반응의 세계(군4), 물질과 에너지(군4), 미적분Ⅱ(군5)',src:'서울대·성균관대·고려대'},
+  ]},
+  {id:'it',icon:'💻',name:'IT·AI',subs:[
+    {sub:'컴퓨터과학·AI·SW',core:'기하 / 물리학 / 인공지능기초',rec:'전자기와 양자 / 정보과학 / 프로그래밍',y2:'기하(선2), 물리학(선3), 인공지능기초(선2)',y3:'미적분Ⅱ(군5), 정보과학(군5), 프로그래밍(군5)',src:'서울대·연세대·고려대·성균관대·경희대·숙명여대·충남대'},
+  ]},
+  {id:'sci',icon:'🔬',name:'자연과학',subs:[
+    {sub:'물리학·천문학',core:'기하 / 물리학',rec:'역학과 에너지 / 전자기와 양자 / 행성우주과학',y2:'기하(선2), 물리학(선3)',y3:'역학과 에너지(군4), 전자기와 양자(군4), 행성우주과학(군4), 미적분Ⅱ(군5)',src:'서울대·연세대·고려대'},
+    {sub:'화학·생화학',core:'기하 / 화학',rec:'화학 반응의 세계 / 물질과 에너지 / 화학 실험',y2:'기하(선2), 화학(선3)',y3:'화학 반응의 세계(군4), 물질과 에너지(군4), 미적분Ⅱ(군5)',src:'서울대·고려대'},
+    {sub:'생물학·생명과학',core:'기하 또는 미적분Ⅱ / 화학 / 생명과학',rec:'세포와 물질대사 / 생물의 유전 / 생명과학 실험',y2:'기하(선2), 화학(선3), 생명과학(선3)',y3:'세포와 물질대사(군4), 생물의 유전(군4), 생명과학 실험(군4), 미적분Ⅱ(군5)',src:'서울대·고려대'},
+    {sub:'지구과학·환경·해양',core:'기하 또는 미적분Ⅱ / 지구과학',rec:'지구시스템과학 / 행성우주과학 / 기후변화와 환경생태',y2:'기하(선2), 지구과학(선3)',y3:'지구시스템과학(군4), 행성우주과학(군4), 미적분Ⅱ(군5)',src:'서울대·연세대'},
+    {sub:'수학·통계학',core:'기하',rec:'역학과 에너지 / 물리학',y2:'기하(선2)',y3:'미적분Ⅱ(군5), 전문수학(군5)',src:'서울대·연세대·고려대'},
+  ]},
+  {id:'hum',icon:'📚',name:'인문',subs:[
+    {sub:'국어·문학·철학·언어학',core:'제2외국어/한문(선1)',rec:'세계사 / 현대사회와 윤리',y2:'중국어·일본어·한문 중 1과목(선1), 세계사(선3)',y3:'인문학과 윤리(군5), 한문 고전 읽기(군5)',src:'서울대(유형①)·고려대·연세대·경희대'},
+    {sub:'사학·고고학·문화재',core:'세계사 / 제2외국어/한문(선1)',rec:'역사로 탐구하는 현대세계 / 현대사회와 윤리',y2:'제2외국어/한문(선1), 세계사(선3)',y3:'동아시아 역사기행(군5), 인문학과 윤리(군5)',src:'서울대(유형①)·고려대·연세대'},
+  ]},
+  {id:'soc',icon:'🏛',name:'사회과학',subs:[
+    {sub:'경영·경제·회계',core:'사회와 문화',rec:'기하 / 금융과 경제생활',y2:'사회와 문화(선3)',y3:'금융과 경제생활(군5)',src:'서울대·연세대·고려대·성균관대·한양대·숙명여대'},
+    {sub:'법학·행정학·정치학',core:'사회와 문화 / 현대사회와 윤리',rec:'세계사 / 정치',y2:'사회와 문화(선3), 현대사회와 윤리(선3), 세계사(선3)',y3:'정치(군5), 인문학과 윤리(군5)',src:'서울대·고려대·연세대·한양대'},
+    {sub:'사회복지·상담·심리학',core:'사회와 문화',rec:'현대사회와 윤리',y2:'사회와 문화(선3)',y3:'윤리문제 탐구(군5)',src:'서울대·고려대·경희대·이화여대'},
+  ]},
+  {id:'edu',icon:'🎓',name:'사범·교육',subs:[
+    {sub:'수학교육·과학교육',core:'기하 / 관련 과학(물·화·생·지 중)',rec:'역학과 에너지 또는 화학 반응의 세계',y2:'기하(선2), 관련 과학(선3)',y3:'미적분Ⅱ(군5), 관련 과학 심화(군4)',src:'서울대(수학교육: 기하+미적분Ⅱ)'},
+    {sub:'교육학·초등교육',core:'사회와 문화',rec:'현대사회와 윤리',y2:'사회와 문화(선3)',y3:'아동 발달과 부모(군5)',src:'서울대(교육학)·한국교원대·경인교대'},
+  ]},
+  {id:'art',icon:'🎨',name:'예체능',subs:[
+    {sub:'미술·디자인',core:'(예술교과 중심)',rec:'세계시민과 지리 / 현대사회와 윤리',y2:'사회문화 관련 과목(선3)',y3:'인문학과 윤리(군5)',src:'서울대·홍익대·이화여대'},
+  ]},
+];
+
+// ══════════════════════════════════════════════════
+// 상태 관리
+// ══════════════════════════════════════════════════
+const SEL = { g1a:null, g1b:null, g2a:null, g2b:null, g3a:[], g3b:[] };
+const MAX = { g3a:2, g3b:2 };
+
+// ══════════════════════════════════════════════════
+// 초기화
+// ══════════════════════════════════════════════════
+window.addEventListener('DOMContentLoaded', () => {
+  buildGrid('grid-g1a', G1A, 'g1a');
+  buildGrid('grid-g1b', G1B, 'g1b');
+  buildGrid('grid-g2a', G2A, 'g2a');
+  buildGrid('grid-g2b', G2B, 'g2b');
+  buildGrid('grid-g3a', G3A, 'g3a');
+  buildGrid('grid-g3b', G3B, 'g3b');
+  initUnivSel();
+  initCareerGrid();
+  initRevGrid();
+});
+
+function switchTab(id, btn) {
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('on'));
+  document.querySelectorAll('.tab').forEach(b => b.classList.remove('on'));
+  document.getElementById('panel-'+id).classList.add('on');
+  btn.classList.add('on');
+}
+
+// 과목 그리드 생성
+function buildGrid(id, list, key) {
+  const g = document.getElementById(id);
+  list.forEach(s => {
+    const t = document.createElement('button');
+    t.className = 'subj-tile';
+    t.dataset.name = s.n;
+    t.dataset.key = key;
+    t.title = s.tip;
+    const star = s.tip.startsWith('★★★') ? '<span style="color:#ffd060;font-size:12px"> ★★★</span>' : '';
+    // disabled 과목 표시
+    if (s.disabled) {
+      t.className = 'subj-tile disabled';
+      t.disabled = true;
+      t.title = s.disabledReason || '선택 불가';
+      t.innerHTML = `
+        <div><div class="sn" style="color:var(--text3)">${s.n}</div><div class="sm">${s.e}</div></div>
+        <div class="st" style="color:var(--text3)">${s.t}</div>
+        <div style="font-size:11px;color:var(--red);font-weight:700;margin-top:4px;background:var(--red-l);padding:2px 6px;border-radius:4px;display:inline-block">🚫 ${s.disabledReason || '선택 불가'}</div>`;
+    } else {
+      t.innerHTML = `<div><div class="sn">${s.n}${star}</div><div class="sm">${s.e}</div></div><div class="st">${s.t}</div><span class="sel-check">✓</span>`;
+      t.addEventListener('click', () => toggleSubj(s.n, key, t));
+    }
+    g.appendChild(t);
+  });
+}
+
+// 한 학기에서 이미 선택된 과목은 다른 학기에서 disabled 처리
+function syncDisabled() {
+  // 선택군3: 1학기에서 선택한 과목은 2학기에서도 선택은 가능 (교육과정상 학기별 다른 과목 권장이지만 규칙상 허용)
+  // 단, 같은 학기 내 같은 과목 중복은 이미 MAX 제한으로 처리됨
+  // 별도 disabled 로직 없음 (이미 toggleSubj에서 처리)
+}
+
+function toggleSubj(name, key, tile) {
+  if (key === 'g1a' || key === 'g1b') {
+    // 단일 선택. 1학기·2학기 같은 과목 체크
+    const otherKey = key === 'g1a' ? 'g1b' : 'g1a';
+    if (SEL[key] === name) {
+      SEL[key] = null;
+      tile.classList.remove('sel');
+    } else {
+      // 같은 과목 양 학기 동시 선택 불가
+      if (SEL[otherKey] === name) {
+        alert('1학기와 2학기에 같은 과목을 중복 선택할 수 없습니다.\n다른 과목을 선택해주세요.');
+        return;
+      }
+      if (SEL[key]) {
+        document.querySelectorAll(`[data-key="${key}"]`).forEach(t => t.classList.remove('sel'));
+      }
+      SEL[key] = name;
+      tile.classList.add('sel');
+    }
+  } else if (key === 'g2a' || key === 'g2b') {
+    // 단일 선택
+    if (SEL[key] === name) {
+      SEL[key] = null;
+      tile.classList.remove('sel');
+    } else {
+      if (SEL[key]) {
+        document.querySelectorAll(`[data-key="${key}"]`).forEach(t => t.classList.remove('sel'));
+      }
+      SEL[key] = name;
+      tile.classList.add('sel');
+    }
+  } else {
+    // 복수 선택 (g3a, g3b) - 최대 2개
+    const arr = SEL[key];
+    if (arr.includes(name)) {
+      SEL[key] = arr.filter(n => n !== name);
+      tile.classList.remove('sel');
+    } else {
+      if (arr.length >= MAX[key]) {
+        alert(`선택군3는 학기당 최대 2과목까지 선택할 수 있습니다.\n기존 선택을 먼저 취소하세요.`);
+        return;
+      }
+      arr.push(name);
+      tile.classList.add('sel');
+    }
+  }
+  updateSummary();
+  updateY3();
+  syncCrossDisabled(); // ← 학기 간 중복 비활성화 동기화
+}
+
+// 선택군3: 1학기에서 선택한 과목 → 2학기에서 비활성화, 반대도 마찬가지
+function syncCrossDisabled() {
+  // g3a 선택 목록 → g3b 타일 비활성화
+  const g3bTiles = document.querySelectorAll('[data-key="g3b"]');
+  g3bTiles.forEach(t => {
+    const nm = t.dataset.name;
+    if (!nm || t.classList.contains('disabled')) return;
+    const label = t.querySelector('.cross-lbl');
+    if (SEL.g3a.includes(nm)) {
+      t.classList.add('cross-disabled');
+      t.disabled = true;
+      if (!label) {
+        const lb = document.createElement('div');
+        lb.className = 'cross-lbl';
+        lb.style.cssText = 'font-size:11px;color:var(--red);font-weight:700;background:var(--red-l);border-radius:4px;padding:2px 7px;margin-top:5px;display:inline-block';
+        lb.textContent = '🚫 1학기 선택됨 — 중복 불가';
+        t.appendChild(lb);
+      }
+    } else {
+      t.classList.remove('cross-disabled');
+      t.disabled = false;
+      if (label) label.remove();
+    }
+  });
+  // g3b 선택 목록 → g3a 타일 비활성화
+  const g3aTiles = document.querySelectorAll('[data-key="g3a"]');
+  g3aTiles.forEach(t => {
+    const nm = t.dataset.name;
+    if (!nm || t.classList.contains('disabled')) return;
+    const label = t.querySelector('.cross-lbl');
+    if (SEL.g3b.includes(nm)) {
+      t.classList.add('cross-disabled');
+      t.disabled = true;
+      if (!label) {
+        const lb = document.createElement('div');
+        lb.className = 'cross-lbl';
+        lb.style.cssText = 'font-size:11px;color:var(--red);font-weight:700;background:var(--red-l);border-radius:4px;padding:2px 7px;margin-top:5px;display:inline-block';
+        lb.textContent = '🚫 2학기 선택됨 — 중복 불가';
+        t.appendChild(lb);
+      }
+    } else {
+      t.classList.remove('cross-disabled');
+      t.disabled = false;
+      if (label) label.remove();
+    }
+  });
+}
+
+function clearAll() {
+  SEL.g1a = null; SEL.g1b = null;
+  SEL.g2a = null; SEL.g2b = null;
+  SEL.g3a = []; SEL.g3b = [];
+  document.querySelectorAll('.subj-tile').forEach(t => {
+    t.classList.remove('sel');
+    t.classList.remove('cross-disabled');
+    if (!t.classList.contains('disabled')) t.disabled = false;
+  });
+  updateSummary();
+  updateY3();
+  syncCrossDisabled();
+}
+
+function updateSummary() {
+  const set = s => s !== null ? 1 : 0;
+  document.getElementById('n1a').textContent = set(SEL.g1a);
+  document.getElementById('n1b').textContent = set(SEL.g1b);
+  document.getElementById('n2a').textContent = set(SEL.g2a);
+  document.getElementById('n2b').textContent = set(SEL.g2b);
+  document.getElementById('n3a').textContent = SEL.g3a.length;
+  document.getElementById('n3b').textContent = SEL.g3b.length;
+
+  const all = [SEL.g1a, SEL.g1b, SEL.g2a, SEL.g2b, ...SEL.g3a, ...SEL.g3b].filter(Boolean);
+  const wrap = document.getElementById('sel-tags-wrap');
+  if (all.length === 0) {
+    wrap.innerHTML = '<span class="sel-empty">아직 선택된 과목이 없습니다. 아래에서 과목을 클릭하세요.</span>';
+    return;
+  }
+  const gOf = n => {
+    if (G1A.find(s=>s.n===n)||G1B.find(s=>s.n===n)) return {lbl:'선1',cls:'g1'};
+    if (G2A.find(s=>s.n===n)||G2B.find(s=>s.n===n)) return {lbl:'선2',cls:'g2'};
+    if (G3A.find(s=>s.n===n)||G3B.find(s=>s.n===n)) return {lbl:'선3',cls:'g3'};
+    return {lbl:'',cls:''};
+  };
+  wrap.innerHTML = all.map(n => {
+    const g = gOf(n);
+    return `<span class="sel-tag"><span class="gb ${g.cls}">${g.lbl}</span> ${n}</span>`;
+  }).join('');
+}
+
+function updateY3() {
+  const all = [SEL.g1a, SEL.g1b, SEL.g2a, SEL.g2b, ...SEL.g3a, ...SEL.g3b].filter(Boolean);
+  const con = document.getElementById('y3-result');
+  if (all.length === 0) {
+    con.innerHTML = `<div class="empty"><div class="empty-icon">🔗</div><div class="empty-txt">위에서 2학년 과목을 선택하면 3학년 연계 추천이 표시됩니다</div><div class="empty-sub">과목 위계(2학년 → 3학년 심화)를 고려한 맞춤 추천</div></div>`;
+    return;
+  }
+  const y3Map = {};
+  const notes = [];
+  all.forEach(subj => {
+    const c = CHAIN[subj];
+    if (!c) return;
+    c.recs.forEach(r => {
+      if (!y3Map[r]) y3Map[r] = {gun:c.gun, froms:[]};
+      if (!y3Map[r].froms.includes(subj)) y3Map[r].froms.push(subj);
+    });
+    if (c.note && !notes.includes(c.note)) notes.push(c.note);
+  });
+  const g4 = Object.entries(y3Map).filter(([,v])=>v.gun==='군4');
+  const g5 = Object.entries(y3Map).filter(([,v])=>v.gun==='군5');
+
+  const y2fi = all.map(n=>`<span class="fi fi-y2">${n}</span>`).join('');
+  const g4fi = g4.map(([n])=>`<span class="fi fi-y3g4"><span class="gb g4">군4</span> ${n}</span>`).join('');
+  const g5fi = g5.map(([n])=>`<span class="fi fi-y3g5"><span class="gb g5">군5</span> ${n}</span>`).join('');
+
+  const renderList = (arr, cls, gLabel) => arr.map(([name, info]) => {
+    const fb = info.froms.map(f=>`<span style="font-size:12px;background:var(--white);border-radius:4px;padding:1px 7px;border:1px solid var(--border);color:var(--text2)">${f}</span>`).join(' ');
+    return `<div style="padding:13px 16px;border:1.5px solid var(--border);border-radius:var(--rs);background:var(--white)">
+      <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+        <span class="gb ${cls}" style="font-size:12px">${gLabel}</span>
+        <span style="font-size:16px;font-weight:700">${name}</span>
+        <span style="font-size:13px;color:var(--text3)">← ${fb} 이수 후 권장</span>
+      </div>
+    </div>`;
+  }).join('');
+
+  con.innerHTML = `
+    <div class="flow-box">
+      <div class="flow-title">📊 2학년 → 3학년 과목 선택 흐름도</div>
+      <div class="flow-row">
+        <div class="flow-year fy2">2학년<br>선택</div>
+        <div class="flow-items">${y2fi}</div>
+        <div class="flow-arrow">→</div>
+        <div style="flex:2">
+          ${g4.length?`<div style="font-size:13px;font-weight:700;color:var(--purple);margin-bottom:7px">🟣 3학년 군4 (과학심화)</div><div class="flow-items" style="margin-bottom:10px">${g4fi}</div>`:''}
+          ${g5.length?`<div style="font-size:13px;font-weight:700;color:var(--teal);margin-bottom:7px">🔵 3학년 군5 (수학·인문·정보)</div><div class="flow-items">${g5fi}</div>`:''}
+        </div>
+      </div>
+    </div>
+    ${g4.length?`<div style="margin-bottom:14px"><div style="font-size:15px;font-weight:700;color:var(--purple);margin-bottom:9px">🟣 3학년 선택군4 — 과학 심화 (학기별 4과목)</div><div style="display:flex;flex-direction:column;gap:8px">${renderList(g4,'g4','군4')}</div></div>`:''}
+    ${g5.length?`<div style="margin-bottom:14px"><div style="font-size:15px;font-weight:700;color:var(--teal);margin-bottom:9px">🔵 3학년 선택군5 — 수학·인문·정보 (학기별 4과목)</div><div style="display:flex;flex-direction:column;gap:8px">${renderList(g5,'g5','군5')}</div></div>`:''}
+    ${notes.length?`<div class="rec-note"><strong>📌 과목 위계 안내</strong><br>${notes.map(n=>`• ${n}`).join('<br>')}</div>`:''}
+    <div style="margin-top:14px;padding:12px 16px;background:var(--bg);border-radius:var(--rs);font-size:13.5px;color:var(--text2);line-height:1.7">
+      ⚠️ 위 추천은 과목 위계와 대학 권장 기준을 종합한 참고 자료입니다. 실제 3학년 과목은 2026년 8월 최종 수강신청 시 결정됩니다. 담임 선생님 또는 1학년부장에게 상담하세요.
+    </div>`;
+}
+
+// ══════════════════════════════════════════════════
+// TAB 2: 대학·학과 조회
+// ══════════════════════════════════════════════════
+function initUnivSel() {
+  const univs = [...new Set(UNIV_DATA.map(d=>d.u))];
+  const sel = document.getElementById('univ-sel');
+  univs.forEach(u => { const o=document.createElement('option'); o.value=u; o.textContent=u; sel.appendChild(o); });
+}
+function updateDepts() {
+  const u = document.getElementById('univ-sel').value;
+  const sel = document.getElementById('dept-sel');
+  sel.innerHTML = '<option value="">학과를 선택하세요</option>';
+  UNIV_DATA.filter(d=>d.u===u).forEach(d => { const o=document.createElement('option'); o.value=d.d; o.textContent=d.d; sel.appendChild(o); });
+}
+function doUnivQuery() {
+  const u = document.getElementById('univ-sel').value;
+  const dep = document.getElementById('dept-sel').value;
+  const con = document.getElementById('univ-result');
+  if (!u||!dep) { con.innerHTML=`<div class="empty"><div class="empty-icon">⚠️</div><div class="empty-txt">대학과 학과를 모두 선택해주세요</div></div>`; return; }
+  const d = UNIV_DATA.find(x=>x.u===u&&x.d===dep);
+  if (!d) return;
+
+  const cArr = d.core.split(/[\/,]/).map(s=>s.trim()).filter(Boolean);
+  const rArr = d.rec.split(/[\/,]/).map(s=>s.trim()).filter(Boolean);
+
+  const allSubjNow = [...G1A,...G1B,...G2A,...G2B,...G3A,...G3B].map(s=>s.n);
+  const isNow = s => allSubjNow.some(n => n===s || s.includes(n) || n.includes(s));
+
+  const ct = arr => arr.map(s => {
+    const now = isNow(s);
+    return `<span class="tag tag-core">${s}${now?`<span class="tag-now">지금선택</span>`:''}</span>`;
+  }).join('');
+  const rt = arr => arr.map(s => {
+    const now = isNow(s);
+    return `<span class="tag tag-rec">${s}${now?`<span class="tag-now-rec">지금선택</span>`:''}</span>`;
+  }).join('');
+
+  const y2p = d.y2.split(',').map(s=>s.trim());
+  const y3p = d.y3.split(',').map(s=>s.trim());
+  const y2fi = y2p.map(p=>`<span class="fi fi-y2">${p}</span>`).join('');
+  const y3fi = y3p.map(p=>`<span class="fi fi-y3g4">${p}</span>`).join('');
+
+  // 같은 학과계열을 가진 다른 대학 찾기
+  const deptKeyword = dep.replace(/학부|학과|계열|대학/g,'').trim().substring(0,5);
+  const similar = UNIV_DATA.filter(x => x.u !== u && x.d.includes(deptKeyword)).slice(0,6);
+
+  con.innerHTML = `
+    <div class="result-card">
+      <div class="result-head">
+        <div class="result-univ">${d.u}</div>
+        <div class="result-dept">${d.d}</div>
+      </div>
+      <div class="result-body">
+        <div class="rsec">
+          <div class="sec-title" style="color:var(--red)">⭐ 핵심 권장과목 (★★★ 강력 권장)</div>
+          <div class="tag-wrap">${ct(cArr)}</div>
+        </div>
+        <div class="rsec">
+          <div class="sec-title" style="color:var(--blue)">💙 권장과목 (★★ 이수 권장)</div>
+          <div class="tag-wrap">${rt(rArr)}</div>
+        </div>
+        <div class="chain-box">
+          <div class="chain-head">
+            <div class="chain-head-t">📊 ${d.u} ${d.d} — 2학년 → 3학년 수강 경로</div>
+            <div class="chain-head-s">이 학과를 목표로 한다면 이렇게 선택하세요</div>
+          </div>
+          <div class="chain-body">
+            <div class="chain-row">
+              <div class="chain-yr cy2">2학년<br>선택</div>
+              <div class="chain-content">
+                <div class="chain-label">지금(1차 수강신청)에서 선택해야 할 과목</div>
+                <div class="flow-items">${y2fi}</div>
+              </div>
+            </div>
+            <div class="chain-down">↓</div>
+            <div class="chain-row">
+              <div class="chain-yr cy3">3학년<br>추천</div>
+              <div class="chain-content">
+                <div class="chain-label">2학년 이수 후 연계하여 선택을 권장하는 3학년 과목</div>
+                <div class="flow-items">${y3fi}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        ${d.note ? `<div class="rsec-note">📌 ${d.note}</div>` : ''}
+        <div class="rsec-src">📎 출처: ${d.src}</div>
+      </div>
+    </div>
+    ${similar.length ? `
+    <div class="univ-search-box">
+      <div class="univ-search-title">🔎 비슷한 학과를 운영하는 다른 대학</div>
+      <div class="similar-list">
+        ${similar.map(x => {
+          const ca = x.core.split(/[\/,]/).map(s=>s.trim()).filter(Boolean).slice(0,3);
+          const ra = x.rec.split(/[\/,]/).map(s=>s.trim()).filter(Boolean).slice(0,3);
+          return `<div class="similar-item" onclick="selectSimilar('${x.u}','${x.d}')">
+            <div class="si-info">
+              <div class="si-univ">${x.u}</div>
+              <div class="si-dept">${x.d}</div>
+              <div class="si-tags">
+                ${ca.map(s=>`<span class="si-tag si-tag-core">${s}</span>`).join('')}
+                ${ra.map(s=>`<span class="si-tag si-tag-rec">${s}</span>`).join('')}
+              </div>
+            </div>
+            <div style="font-size:22px;color:var(--border2);flex-shrink:0;align-self:center">›</div>
+          </div>`;
+        }).join('')}
+      </div>
+      <div style="font-size:13px;color:var(--text3);margin-top:12px">클릭하면 해당 대학·학과로 결과가 전환됩니다.</div>
+    </div>` : ''}`;
+}
+function selectSimilar(u, d) {
+  document.getElementById('univ-sel').value = u;
+  updateDepts();
+  setTimeout(() => { document.getElementById('dept-sel').value = d; doUnivQuery(); }, 100);
+}
+
+// ══════════════════════════════════════════════════
+// TAB 3: 진로 계열
+// ══════════════════════════════════════════════════
+let AC=null, AS=null;
+function initCareerGrid() {
+  const g = document.getElementById('career-grid');
+  CAREER_DATA.forEach(c => {
+    const b=document.createElement('button'); b.className='career-btn'; b.dataset.id=c.id;
+    b.innerHTML=`<span class="career-icon">${c.icon}</span>${c.name}`;
+    b.onclick=()=>selCareer(c.id); g.appendChild(b);
+  });
+}
+function selCareer(id) {
+  document.querySelectorAll('.career-btn').forEach(b=>b.classList.toggle('on',b.dataset.id===id));
+  AC=CAREER_DATA.find(c=>c.id===id); AS=AC.subs[0]; renderCareer();
+}
+function selSub(s) { AS=AC.subs.find(x=>x.sub===s); renderCareer(); }
+function renderCareer() {
+  const c=AC, s=AS;
+  const ca=s.core.split(/[\/,]/).map(x=>x.trim()).filter(Boolean);
+  const ra=s.rec.split(/[\/,]/).map(x=>x.trim()).filter(Boolean);
+  const y2p=s.y2.split(',').map(x=>x.trim());
+  const y3p=s.y3.split(',').map(x=>x.trim());
+  const ct=arr=>arr.map(x=>`<span class="tag tag-core">${x}</span>`).join('');
+  const rt=arr=>arr.map(x=>`<span class="tag tag-rec">${x}</span>`).join('');
+  const y2fi=y2p.map(p=>`<span class="fi fi-y2">${p}</span>`).join('');
+  const y3fi=y3p.map(p=>`<span class="fi fi-y3g4">${p}</span>`).join('');
+  document.getElementById('career-result').innerHTML=`
+    <div class="result-card">
+      <div class="result-head" style="background:linear-gradient(135deg,#1a2a14 0%,#1a3a20 100%)">
+        <div class="result-univ">${c.icon} ${c.name}</div>
+        <div class="result-dept">2022 개정 교육과정 대학 공식 발표 권장과목 기준</div>
+      </div>
+      <div class="result-body">
+        <div class="sub-tabs">${c.subs.map(x=>`<button class="sub-tab ${x===s?'on':''}" onclick="selSub('${x.sub}')">${x.sub}</button>`).join('')}</div>
+        <div class="rsec"><div class="sec-title" style="color:var(--red)">⭐ 핵심 권장과목 (★★★)</div><div class="tag-wrap">${ct(ca)}</div></div>
+        <div class="rsec"><div class="sec-title" style="color:var(--blue)">💙 권장과목 (★★)</div><div class="tag-wrap">${rt(ra)}</div></div>
+        <div class="chain-box">
+          <div class="chain-head"><div class="chain-head-t">📊 ${s.sub} — 2학년 → 3학년 수강 경로</div></div>
+          <div class="chain-body">
+            <div class="chain-row"><div class="chain-yr cy2">2학년</div><div class="chain-content"><div class="chain-label">지금 선택 권장 과목</div><div class="flow-items">${y2fi}</div></div></div>
+            <div class="chain-down">↓</div>
+            <div class="chain-row"><div class="chain-yr cy3">3학년</div><div class="chain-content"><div class="chain-label">연계 권장 3학년 과목</div><div class="flow-items">${y3fi}</div></div></div>
+          </div>
+        </div>
+        <div class="rsec-src" style="margin-top:14px">📎 출처: ${s.src}</div>
+      </div>
+    </div>`;
+}
+
+// ══════════════════════════════════════════════════
+// TAB 4: 역조회
+// ══════════════════════════════════════════════════
+const ALL_SUBJ = [
+  ...G1A.map(s=>({n:s.n,gun:'선1',cls:'g1'})),
+  ...G1B.filter(s=>!G1A.find(x=>x.n===s.n)).map(s=>({n:s.n,gun:'선1',cls:'g1'})),
+  ...G2A.map(s=>({n:s.n,gun:'선2',cls:'g2'})),
+  ...G2B.filter(s=>!G2A.find(x=>x.n===s.n)).map(s=>({n:s.n,gun:'선2',cls:'g2'})),
+  ...G3A.map(s=>({n:s.n,gun:'선3',cls:'g3'})),
+];
+let revF='전체', revA=null;
+function initRevGrid() {
+  const fb=document.getElementById('rev-filter');
+  ['전체','선1(제2외국어)','선2(수학·정보·융합)','선3(사회·과학)'].forEach(f=>{
+    const b=document.createElement('button');
+    b.className=`rev-chip ${f==='전체'?'on':''}`;
+    b.textContent=f;
+    b.onclick=()=>{document.querySelectorAll('.rev-chip').forEach(x=>x.classList.remove('on'));b.classList.add('on');revF=f;renderRevGrid();};
+    fb.appendChild(b);
+  });
+  renderRevGrid();
+}
+function renderRevGrid() {
+  const g=document.getElementById('rev-grid'); g.innerHTML='';
+  const filt=ALL_SUBJ.filter(s=>{
+    if(revF==='전체')return true;
+    if(revF.startsWith('선1'))return s.gun==='선1';
+    if(revF.startsWith('선2'))return s.gun==='선2';
+    if(revF.startsWith('선3'))return s.gun==='선3';
+    return true;
+  });
+  filt.forEach(s=>{
+    const t=document.createElement('button');
+    t.className=`rev-tile ${revA===s.n?'on':''}`;
+    t.innerHTML=`<div class="rt-name">${s.n}</div><div class="rt-meta"><span class="gb ${s.cls}">${s.gun}</span></div>`;
+    t.onclick=()=>{revA=s.n;renderRevGrid();doRev(s.n);};
+    g.appendChild(t);
+  });
+}
+function doRev(name) {
+  const con=document.getElementById('rev-result');
+  const hits=[];
+  UNIV_DATA.forEach(d=>{
+    const ic=d.core.split(/[\/,]/).map(s=>s.trim()).some(s=>s.includes(name)||name.includes(s));
+    const ir=d.rec.split(/[\/,]/).map(s=>s.trim()).some(s=>s.includes(name)||name.includes(s));
+    if(ic) hits.push({u:d.u,dep:d.d,lv:'core'});
+    else if(ir) hits.push({u:d.u,dep:d.d,lv:'rec'});
+  });
+  const chain=CHAIN[name];
+  const chainHtml=chain?`
+    <div class="chain-box" style="margin-top:16px">
+      <div class="chain-head" style="background:linear-gradient(90deg,var(--green) 0%,var(--blue) 100%)">
+        <div class="chain-head-t">🔗 「${name}」 이수 후 연계 권장 3학년 과목</div>
+      </div>
+      <div class="chain-body">
+        <div class="flow-items" style="display:flex;flex-wrap:wrap;gap:8px">
+          ${chain.recs.map(r=>`<span class="fi ${chain.gun==='군4'?'fi-y3g4':'fi-y3g5'}"><span class="gb ${chain.gun==='군4'?'g4':'g5'}">${chain.gun}</span> ${r}</span>`).join('')}
+        </div>
+        <div style="margin-top:12px;font-size:14px;color:var(--text2);line-height:1.7">${chain.note}</div>
+      </div>
+    </div>` : '';
+
+  if(hits.length===0){
+    con.innerHTML=`<div class="empty"><div class="empty-icon">😅</div><div class="empty-txt">"${name}"을 명시적으로 권장한 대학 데이터가 없습니다</div><div class="empty-sub">공식 발표를 하지 않은 대학이 많습니다. 진로 계열 탭을 활용해보세요.</div></div>${chainHtml}`;
+    return;
+  }
+  const core=hits.filter(h=>h.lv==='core');
+  const rec=hits.filter(h=>h.lv==='rec');
+  const li=arr=>arr.map(h=>`<div class="univ-item" onclick="goToUniv('${h.u}','${h.dep}')">
+    <div class="ui-info"><div class="ui-univ">${h.u}</div><div class="ui-dept">${h.dep}</div></div>
+    <span class="ui-lv ${h.lv==='core'?'lv-core':'lv-rec'}">${h.lv==='core'?'★★★ 핵심':'★★ 권장'}</span>
+  </div>`).join('');
+
+  con.innerHTML=`
+    <div class="result-card" style="animation:fadeUp .3s ease">
+      <div class="result-head" style="background:var(--green)">
+        <div class="result-univ">「${name}」</div>
+        <div class="result-dept">권장 대학·학과 총 ${hits.length}건 (핵심: ${core.length} / 권장: ${rec.length})</div>
+      </div>
+      <div class="result-body">
+        ${core.length?`<div class="sec-title" style="color:var(--red)">★★★ 핵심 권장 (${core.length}건)</div><div class="univ-list" style="margin-bottom:18px">${li(core)}</div>`:''}
+        ${rec.length?`<div class="sec-title" style="color:var(--blue)">★★ 권장 (${rec.length}건)</div><div class="univ-list">${li(rec)}</div>`:''}
+        <div style="margin-top:14px;padding:12px 16px;background:var(--bg);border-radius:var(--rs);font-size:13.5px;color:var(--text2)">💡 항목을 클릭하면 해당 대학·학과 상세 정보로 이동합니다.</div>
+      </div>
+    </div>
+    ${chainHtml}`;
+}
+function goToUniv(u, d) {
+  document.querySelectorAll('.tab')[1].click();
+  document.getElementById('univ-sel').value = u;
+  updateDepts();
+  setTimeout(() => { document.getElementById('dept-sel').value = d; doUnivQuery(); window.scrollTo({top:0,behavior:'smooth'}); }, 150);
+}
+</script>
+</body>
+</html>
